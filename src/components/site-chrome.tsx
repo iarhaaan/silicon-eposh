@@ -54,24 +54,25 @@ export function SiteNav() {
   const [open, setOpen] = useState(false);
   return (
     <header className="sticky top-0 z-40 backdrop-blur-md bg-background/80 border-b border-border">
-      <div className="mx-auto max-w-7xl px-4 lg:px-8 flex items-center justify-between h-16">
+      <div className="mx-auto max-w-7xl px-4 lg:px-8 flex items-center justify-between h-16 gap-6">
         <Link to="/" className="flex items-center gap-2 group shrink-0">
           <span className="font-display text-lg lg:text-xl tracking-tight">Silicon&nbsp;Epoch</span>
         </Link>
         
-        <div className="flex items-center gap-4">
-          <nav className="hidden xl:flex items-center gap-4.5">
-            {NAV.map((n) => (
-              <Link
-                key={n.to}
-                to={n.to}
-                className="text-[12px] font-medium tracking-wide text-foreground/70 hover:text-foreground transition-colors [&.active]:text-ember"
-                activeOptions={{ exact: n.to === "/" }}
-              >
-                {n.label}
-              </Link>
-            ))}
-          </nav>
+        <nav className="hidden xl:flex items-center justify-center gap-4 xl:gap-4.5 flex-1 mx-4">
+          {NAV.map((n) => (
+            <Link
+              key={n.to}
+              to={n.to}
+              className="text-[12px] font-medium tracking-wide text-foreground/70 hover:text-foreground transition-colors [&.active]:text-ember shrink-0"
+              activeOptions={{ exact: n.to === "/" }}
+            >
+              {n.label}
+            </Link>
+          ))}
+        </nav>
+        
+        <div className="flex items-center gap-4 shrink-0">
           {/* Large screens but not extra-large: compact navigation */}
           <nav className="hidden lg:flex xl:hidden items-center gap-3">
             {NAV.filter(n => ["/", "/companies", "/infrastructure", "/geopolitics", "/open-vs-closed", "/data-wall", "/sources"].includes(n.to)).map((n) => (

@@ -1,54 +1,98 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageShell } from "@/components/site-chrome";
 
 export const Route = createFileRoute("/next-decade")({
   head: () => ({
     meta: [
-      { title: "The Next Decade — Silicon Epoch" },
-      { name: "description", content: "Year by year, capability by capability — what artificial intelligence will be able to do in the next ten years, according to the people building it." },
-      { property: "og:title", content: "The Next Decade — Silicon Epoch" },
+      { title: "Horizon Technologies & Next Decade — Silicon Epoch" },
+      { name: "description", content: "Quantum computing (IBM Starling, Google Willow), neuromorphic Rain chips, DNA storage, and the 2026–2035 year-by-year timeline." },
+      { property: "og:title", content: "Horizon Technologies & Next Decade — Silicon Epoch" },
     ],
   }),
   component: NextDecade,
 });
 
+const HORIZONS = [
+  {
+    title: "Quantum Computing",
+    desc: "The NISQ (Noisy Intermediate-Scale Quantum) era is maturing. Google Willow (Dec 2024) demonstrated below-threshold error correction (0.143% error/cycle across 105 physical qubits). IBM's 'Starling' architecture targets 200 logical, error-corrected qubits by 2029 for commercial quantum advantage in chemical and optimization algorithms. Cryogenic systems are laying the foundation for future Quantum Machine Learning.",
+  },
+  {
+    title: "Bio-AI & Neuromorphic Chips",
+    desc: "Neuromorphic architectures bypass the von Neumann bottleneck using event-driven analog memristive circuits. Projects like SpiNNaker2 simulate 10 billion neurons at 0.3 exaops, while Rain Neuromorphics designs analog chips showing 100,000× energy efficiency gains in edge environments. Concurrently, DNA data storage (Twist/Atlas targets 13TB per drop by 2026) aims to replace tape storage.",
+  },
+  {
+    title: "Physical Autonomy",
+    desc: "Humanoid robotics capital investment has exploded. Systems are shifting from hydraulic systems to pure electric actuation, powered by Vision-Language-Action (VLA) models trained on human teleoperation. Platforms like Tesla's Optimus Gen 3 (targeting $20K-$30K), Figure 02 (BMW factory trials), and Boston Dynamics' electric Atlas represent the early vanguard of physical automation.",
+  },
+];
+
 const YEARS = [
-  { y: "2026", t: "The year of the agent.", b: "Reasoning models become standard. Multi-step browser and coding agents go from demo to default. First AI-run software companies. Humanoid robots enter homes (1X NEO) and factories at scale (Figure, Optimus pilots)." },
-  { y: "2027", t: "Frontier models match top human experts.", b: "Amodei's ‘powerful AI’ threshold. Models that out-perform Nobel laureates across most fields, on demand. Massive scientific acceleration begins. Compute clusters cross the gigawatt mark." },
-  { y: "2028", t: "AI-native consumer hardware everywhere.", b: "AI glasses (Meta Orion, Apple), ambient AI in cars and homes, real-time speech-to-speech translation as default. Personal AI agents start managing schedules, money and inboxes end-to-end." },
-  { y: "2029", t: "Kurzweil's AGI year.", b: "By many definitions, AGI exists in the lab. Multiple AI-discovered drugs reach approval. Software engineering as a profession is restructured around AI co-developers. Robotaxi fleets surpass human-driven rides in major cities." },
-  { y: "2030", t: "AI as scientific infrastructure.", b: "Most new physics, chemistry and biology results have AI co-authors. The first AI-designed material in mass production. Climate models, fusion experiments and drug pipelines all routed through neural networks." },
-  { y: "2031", t: "Real-time generated entertainment.", b: "First mainstream games and films built on neural world models. Personalised, infinite-length media — every viewer gets a different cut. AI characters with persistent memory across platforms." },
-  { y: "2032", t: "The robotics ImageNet moment matures.", b: "General-purpose humanoids common in warehouses, hospitals and homes. Surgical robotics with AI co-pilots become standard of care. Cost per humanoid drops below $20K." },
-  { y: "2033", t: "Education is rebuilt around AI tutors.", b: "Most learners worldwide have lifetime personal AI tutors. Credentialing shifts from time-served to capability-demonstrated. Universities re-purpose around mentorship, research and community." },
-  { y: "2034", t: "Pre-ASI guardrails get serious.", b: "International treaties on frontier training runs. Compute monitoring, interpretability research and model evaluations as mature as nuclear safeguards. Public debate on rights and personhood of digital minds begins in earnest." },
-  { y: "2035", t: "The decade closes with the question of our era.", b: "Either we have entered the early phase of superintelligence and learned to live with it, or we have collectively agreed to slow down. Either way, the world looks more different from 2025 than 2025 looked from 1995." },
+  { y: "2026", t: "The Year of the Agent", b: "Reasoning models become default. Multi-step browser and coding agents go from demo to production. First agentic-run organizations. Humanoid robots enter warehouse pilots." },
+  { y: "2027", t: "Olympiad and Expert Parity", b: "Models outperform top human specialists across sciences on demand. Massive medical and materials discovery acceleration starts. Compute clusters cross the gigawatt threshold." },
+  { y: "2028", t: "Nuclear-Powered Datacenters", b: "First dedicated nuclear-powered clusters go online (Microsoft Crane / Three Mile Island 835 MW, Amazon Susquehanna). Personal agent swarms manage enterprise operations." },
+  { y: "2029", t: "Fault-Tolerant Quantum Advantage", b: "IBM Starling architecture ships early commercial advantage. Software engineering shifts from manual coding to architecture planning via autonomous executors." },
+  { y: "2030", t: "SMR Grid Proliferation", b: "Google Kairos Power SMRs (500 MW) and Meta Oklo SMRs (1.2 GW) come online. AI-discovered materials enter automotive and aerospace production lines." },
+  { y: "2032", t: "Surgical and Physical Autonomy", b: "Fully autonomous surgical robots enter clinical trial phases. Humanoid robots become standard in logistics and healthcare facilities, with costs falling below $20K." },
+  { y: "2035", t: "Early Superintelligence", b: "Recursive self-improvement triggers ASL-4 safeguards. International treaties establish compute-monitoring protocols similar to nuclear non-proliferation treaties." },
 ];
 
 function NextDecade() {
   return (
     <PageShell>
+      {/* Intro */}
       <section className="mx-auto max-w-7xl px-6 lg:px-10 pt-20 pb-12">
-        <div className="eyebrow">Chapter 07 · 2026 → 2035</div>
-        <h1 className="display mt-6 text-[clamp(2.5rem,7vw,7rem)] max-w-6xl">
-          Ten years that will <em className="italic text-ember">remake the world</em>.
+        <div className="eyebrow">Chapter 08 · The Next Decade</div>
+        <h1 className="display mt-6 text-[clamp(2.5rem,7vw,7rem)] max-w-6xl leading-[0.95]">
+          Horizon Technologies: <em className="italic text-ember">Next-decade</em> substrates.
         </h1>
         <p className="mt-8 max-w-3xl text-xl text-foreground/75 leading-relaxed">
-          A year-by-year sketch, synthesised from the public roadmaps of OpenAI, Anthropic, DeepMind, xAI, Meta and the leading Chinese labs. Predictions are predictions — but every line below is anchored in something someone building this technology is on record saying.
+          While today's AI is built on digital CMOS silicon and dense transformers, the research community is active on a pipeline of horizon technologies designed to break boundaries in energy, processing latency, and physical embodiment.
         </p>
       </section>
 
-      <section className="mx-auto max-w-5xl px-6 lg:px-10 pb-24">
-        <ol className="relative border-l-2 border-border">
-          {YEARS.map((y) => (
-            <li key={y.y} className="ml-8 mb-12 relative">
-              <span className="absolute -left-[44px] top-1 inline-flex h-5 w-5 rounded-full bg-ember ring-8 ring-background" />
-              <div className="font-mono text-sm text-ember">{y.y}</div>
-              <h3 className="font-display text-3xl mt-1">{y.t}</h3>
-              <p className="mt-3 text-foreground/80 leading-relaxed">{y.b}</p>
-            </li>
+      {/* Horizon tech grid */}
+      <section className="mx-auto max-w-7xl px-6 lg:px-10 py-12">
+        <div className="grid md:grid-cols-3 gap-px bg-border border border-border rounded-3xl overflow-hidden">
+          {HORIZONS.map((h) => (
+            <article key={h.title} className="bg-background p-10 flex flex-col justify-between min-h-[250px]">
+              <div>
+                <h3 className="font-display text-2xl text-ember">{h.title}</h3>
+                <p className="mt-4 text-xs text-foreground/80 leading-relaxed">{h.desc}</p>
+              </div>
+            </article>
           ))}
-        </ol>
+        </div>
+      </section>
+
+      {/* Timeline */}
+      <section className="mx-auto max-w-7xl px-6 lg:px-10 py-20 border-t border-border">
+        <div className="eyebrow">Decade Roadmap · 2026 → 2035</div>
+        <h2 className="display mt-4 text-5xl mb-12">Ten years that will reshape civilization.</h2>
+        <div className="max-w-4xl">
+          <ol className="relative border-l-2 border-border ml-4">
+            {YEARS.map((y) => (
+              <li key={y.y} className="ml-8 mb-12 relative">
+                <span className="absolute -left-[42px] top-1 inline-flex h-4 w-4 rounded-full bg-ember ring-8 ring-background" />
+                <div className="font-mono text-sm text-ember font-medium">{y.y}</div>
+                <h3 className="font-display text-2xl mt-1">{y.t}</h3>
+                <p className="mt-3 text-xs text-foreground/75 leading-relaxed">{y.b}</p>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      {/* Navigation Footer */}
+      <section className="mx-auto max-w-7xl px-6 lg:px-10 py-16 border-t border-border">
+        <div className="flex justify-between items-center">
+          <Link to="/games" className="text-sm text-foreground/60 hover:text-foreground">
+            ← Chapter 07: Games
+          </Link>
+          <Link to="/infrastructure" className="text-sm font-medium text-ember hover:underline">
+            Chapter 09: Infrastructure →
+          </Link>
+        </div>
       </section>
     </PageShell>
   );

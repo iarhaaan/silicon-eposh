@@ -32,7 +32,7 @@ function Learn() {
   return (
     <PageShell>
       <section className="mx-auto max-w-7xl px-6 lg:px-10 pt-20 pb-12">
-        <div className="eyebrow">Chapter 08 · The most valuable skill</div>
+        <div className="eyebrow">Appendix · Daily AI Fluency</div>
         <h1 className="display mt-6 text-[clamp(2.5rem,7vw,7rem)] max-w-6xl">
           AI literacy is the new <em className="italic text-ember">general literacy</em>.
         </h1>

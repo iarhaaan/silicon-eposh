@@ -4,6 +4,7 @@ import { Sun, Moon, ChevronDown } from "lucide-react";
 
 const NAV = [
   { to: "/", label: "Overview" },
+  { to: "/compute", label: "Compute Core" },
   { to: "/how-ai-works", label: "How It Works" },
   { to: "/companies", label: "Frontier Labs" },
   { to: "/use-cases", label: "Use Cases" },
@@ -23,10 +24,11 @@ const CHAPTER_GROUPS = [
   {
     title: "Foundations & Tech",
     items: [
+      { to: "/compute", label: "01 · Compute Core" },
       { to: "/how-ai-works", label: "02 · How It Works" },
       { to: "/use-cases", label: "04 · Use Cases" },
       { to: "/games", label: "07 · Games" },
-      { to: "/learn", label: "13 · Learn AI" },
+      { to: "/learn", label: "Appendix · Learn AI" },
     ],
   },
   {
@@ -45,9 +47,11 @@ const CHAPTER_GROUPS = [
       { to: "/humanity", label: "05 · Humanity" },
       { to: "/agi-asi", label: "06 · AGI & ASI" },
       { to: "/next-decade", label: "08 · Next Decade" },
+      { to: "/sources", label: "Sources Bibliography" },
     ],
   },
 ];
+
 
 export function ThemeToggle() {
   const [theme, setTheme] = useState<"light" | "dark">(() => {

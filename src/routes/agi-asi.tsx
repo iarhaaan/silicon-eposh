@@ -1,120 +1,136 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageShell } from "@/components/site-chrome";
 
 export const Route = createFileRoute("/agi-asi")({
   head: () => ({
     meta: [
-      { title: "AGI & ASI — Silicon Epoch" },
-      { name: "description", content: "AGI definitions, every CEO's timeline, current benchmarks (ARC-AGI 87.5%, SWE-bench 80%, AIME 100%), Metaculus forecasts and what comes after." },
-      { property: "og:title", content: "AGI & ASI — Silicon Epoch" },
+      { title: "AGI & ASI Timelines — Silicon Epoch" },
+      { name: "description", content: "Consensus AGI predictions from Altman, Amodei, Legg, Hassabis, Schmidt, Huang, Kurzweil. Chinchilla scaling limits and test-time compute." },
+      { property: "og:title", content: "AGI & ASI Timelines — Silicon Epoch" },
     ],
   }),
   component: AgiAsi,
 });
 
 const TIMELINE = [
-  { who: "Sam Altman", role: "OpenAI", year: "Now / 2027", quote: "“We basically built AGI.” (Feb 2026) · “We are past the event horizon; the takeoff has started.” (The Gentle Singularity, May 2026)" },
-  { who: "Dario Amodei", role: "Anthropic", year: "2026–2027", quote: "“We are near the end of the exponential — a few years away from a country of geniuses in a data center.” (Dwarkesh podcast, Feb 2026)" },
-  { who: "Demis Hassabis", role: "Google DeepMind", year: "~2030", quote: "“We are standing in the foothills of the singularity. Society has only a few years left to prepare. Today's agents are a practice run for AGI.” (Axios, May 2026)" },
-  { who: "Elon Musk", role: "xAI", year: "By end of 2026", quote: "“Grok 5 hits AGI.” (Apr 2026, endorsing a viral post). At Davos Jan 2026: ‘By year-end 2026.’" },
-  { who: "Jensen Huang", role: "Nvidia", year: "Achieved", quote: "“I think we've achieved AGI.” (Lex Fridman, Mar 2026 — by his definition of an AI that can autonomously create a billion-dollar app.)" },
-  { who: "Ilya Sutskever", role: "Safe Superintelligence Inc.", year: "Years, not decades", quote: "SSI is going ‘straight to superintelligence’ — skipping incremental deployments. Founded specifically because Ilya believes ASI is within reach." },
-  { who: "Yann LeCun", role: "AMI Labs (ex-Meta)", year: "Beyond 2035", quote: "Published arXiv:2602.23643 in Feb 2026 formally retiring the term ‘AGI’ and proposing ‘SAI’. ‘LLMs will not lead to AGI.’" },
-  { who: "Ray Kurzweil", role: "Futurist · Google", year: "2029 / 2045", quote: "Reaffirmed his 2029 AGI prediction at MIT in June 2026. Singularity by 2045." },
-  { who: "Geoffrey Hinton", role: "Nobel laureate", year: "5–20 years", quote: "Warning that AI deception capabilities are advancing faster than general-intelligence benchmarks suggest." },
-  { who: "Metaculus aggregate", role: "Calibrated forecasters", year: "25% by 2029 · 50% by 2033", quote: "Largest public AGI forecasting market; superforecaster median moved from 2034 to 2031 in 2025–2026." },
+  { who: "Elon Musk (xAI)", year: "2026", quote: "AGI 'smarter than the smartest human' will arrive as early as 2026, driven by Grok 5." },
+  { who: "Dario Amodei (Anthropic)", year: "~2027", quote: "AGI 'likely within a few years' (estimated around 2027). Reaffirmed at WEF Davos 2026." },
+  { who: "Shane Legg (DeepMind)", year: "2028", quote: "50% probability of achieving 'minimal AGI' by 2028 (reaffirmed in January 2026)." },
+  { who: "Demis Hassabis (DeepMind)", year: "~2030", quote: "50% chance of achieving AGI by the end of the decade (~2030). Reaffirmed at WEF Davos 2026." },
+  { who: "Eric Schmidt (ex-Google)", year: "2028-2030", quote: "AGI is likely 3 to 5 years away (estimate from April 2025)." },
+  { who: "Jensen Huang (NVIDIA)", year: "2029", quote: "AI will be able to pass any test/benchmark designed by humans by 2029 (estimate from March 2024)." },
+  { who: "Ray Kurzweil (Futurist)", year: "2029", quote: "Maintains his decades-long prediction of AGI by 2029, and Singularity by 2045." },
+  { who: "Sam Altman (OpenAI)", year: "2035", quote: "AGI will arrive within a 'few thousand days' (essay from late 2024)." },
+  { who: "Ajeya Cotra (Open Phil)", year: "2040", quote: "50% chance of AGI by 2040, based on bio-anchors framework (2024 update)." },
+  { who: "Metaculus (Forecasters)", year: "2033", quote: "Aggregate superforecaster median points to 25% probability by 2029, and 50% by 2033 (as of Feb 2026)." },
+  { who: "Samotsvety Forecasting", year: "2041", quote: "Aggregated consensus: 10% chance of AGI by 2026, and 50% by 2041 (Jan 2026 update)." },
 ];
 
 const BENCHMARKS = [
-  { name: "ARC-AGI-1", a: "GPT-4o (2024): 5%", b: "o3 (2025): 87.5%" },
-  { name: "ARC-AGI-2", a: "Human baseline: ~72%", b: "Gemini 3.1 Pro: 77.1%" },
-  { name: "SWE-bench Verified", a: "2024: <50%", b: "Claude Opus 4.5 / Gemini 3.1 Pro / GPT-5.2: ~80%" },
-  { name: "GPQA Diamond", a: "Doctoral science Qs (2024): ~50%", b: "Frontier 2026: 85–94%" },
-  { name: "AIME (math)", a: "2024: ~60%", b: "GPT-5.2 (2026): 100%" },
-  { name: "OSWorld (desktop automation)", a: "Human expert: 72.4%", b: "Best AI agent: 76%" },
+  { name: "ARC-AGI-1 (abstraction)", a: "GPT-4o (2024): 5.0%", b: "o3 (2025): 87.5%" },
+  { name: "ARC-AGI-2 (human baseline)", a: "Human Expert: ~72.0%", b: "Gemini 3.1 Pro: 77.1%" },
+  { name: "SWE-bench Pro (hard code)", a: "Gemini 3.1 Pro: 54.2%", b: "Claude Opus 4.8: 69.2%" },
+  { name: "SWE-bench Verified (curated code)", a: "Sonnet 4.6: 79.6%", b: "Claude Opus 4.8: 88.6%" },
+  { name: "GPQA Diamond (doctoral science)", a: "Human PhD baseline: ~65.0%", b: "Frontier 2026: 85.0 - 94.0%" },
+  { name: "AIME (test-time math)", a: "DeepSeek-R1 (base): 15.6%", b: "DeepSeek-R1 (scaled): 86.7%" },
 ];
 
 function AgiAsi() {
   return (
     <PageShell>
+      {/* Intro */}
       <section className="mx-auto max-w-7xl px-6 lg:px-10 pt-20 pb-12">
-        <div className="eyebrow">Chapter 05 · The road ahead</div>
-        <h1 className="display mt-6 text-[clamp(2.5rem,7vw,7rem)] max-w-6xl">
+        <div className="eyebrow">Chapter 06 · AGI & ASI</div>
+        <h1 className="display mt-6 text-[clamp(2.5rem,7vw,7rem)] max-w-6xl leading-[0.95]">
           What happens when we build a mind <em className="italic text-ember">smarter than ours</em>?
         </h1>
         <p className="mt-8 max-w-3xl text-xl text-foreground/75 leading-relaxed">
-          AGI — artificial general intelligence — is the point at which a single system can do most economically valuable cognitive work at or above human level. ASI — artificial superintelligence — is what comes after: a system that surpasses every human in every domain. As of mid-2026, the only thing every frontier lab agrees on is that it's coming. The disagreement is about when, and what to call it.
+          AGI (Artificial General Intelligence) is the point where a software system performs any economically valuable cognitive task at or above human level. ASI (Artificial Superintelligence) represents what follows: a system that recursively improves, outthinking the entirety of humanity.
         </p>
       </section>
 
+      {/* AGI vs ASI Panels */}
       <section className="mx-auto max-w-7xl px-6 lg:px-10 py-12 grid md:grid-cols-2 gap-10">
         <div className="rounded-3xl border border-border p-10 bg-card">
           <div className="eyebrow">AGI · Artificial General Intelligence</div>
           <h2 className="display text-4xl mt-3">A coworker for every job.</h2>
-          <p className="mt-5 text-foreground/80 leading-relaxed">A system that can learn any new skill at human speed, reason across domains, use tools, plan, and act in the world. By most working definitions, today's frontier models are 60–80% of the way there. Sam Altman, Jensen Huang and others now publicly claim it has effectively arrived.</p>
-          <ul className="mt-6 space-y-2 text-foreground/80">
-            <li>· Frontier benchmarks (MMLU, GPQA, SWE-bench, ARC-AGI, AIME) are being saturated.</li>
-            <li>· Agentic tool-use loops handle multi-day projects (Qwen 3.7-Max runs 35h; GLM-5.1 runs 8h).</li>
-            <li>· The remaining gap: long-horizon planning, robust memory, embodied common sense, autonomy without supervision, intuitive physics.</li>
+          <p className="mt-5 text-xs text-foreground/80 leading-relaxed">A system capable of learning new skills at human speed, reasoning across disciplines, utilizing tools, planning, and executing action loops without supervision. By 2026, the remaining gaps consist of long-horizon planning, robust memory retention across context sessions, and embodied common sense in physical reality.</p>
+          <ul className="mt-6 space-y-2 text-xs text-foreground/85">
+            <li>· Frontier benchmarks (GPQA, SWE-bench Pro, AIME) are nearing saturation.</li>
+            <li>· Test-time reasoning models (OpenAI o1/o3, DeepSeek-R1) trade latency for accuracy by emitting 20K-60K thinking tokens.</li>
+            <li>· Chinese token consumption has surged to <strong>140 trillion tokens daily</strong> in Q1 2026, indicating that active inference is replacing training as the dominant compute cost.</li>
           </ul>
         </div>
         <div className="rounded-3xl bg-ink text-paper p-10 grain">
           <div className="grain-overlay" />
           <div className="eyebrow text-paper/60">ASI · Artificial Superintelligence</div>
-          <h2 className="display text-4xl mt-3">A scientist that thinks faster than the world.</h2>
-          <p className="mt-5 text-paper/85 leading-relaxed">An ASI is a system that not only matches but vastly exceeds the best human in every cognitive domain — running thousands or millions of cognitive workers in parallel inside a data centre. Ilya Sutskever founded SSI to go ‘straight to superintelligence’.</p>
-          <ul className="mt-6 space-y-2 text-paper/85">
-            <li>· Could design its own successor — recursive self-improvement.</li>
-            <li>· Could compress decades of scientific progress into months (Amodei's Machines of Loving Grace).</li>
-            <li>· Demands answers to alignment, control and governance we don't yet have — Anthropic publicly calls for a verifiable global pause mechanism.</li>
+          <h2 className="display text-4xl mt-3">A scientist thinking at machine-velocity.</h2>
+          <p className="mt-5 text-xs text-paper/85 leading-relaxed">An ASI is a system that vastly exceeds the best human minds in every cognitive, creative, and technical domain. Operating millions of parallel threads in a data center, it could execute decades of scientific progress in months, introducing recursive self-improvement loops that demand safety paradigms we have yet to verify.</p>
+          <ul className="mt-6 space-y-2 text-xs text-paper/85">
+            <li>· Direct physical control: Automated laboratories executing chemistry, genomics, and hardware designs at machine speed.</li>
+            <li>· Decisional Safety: Safety frameworks like Anthropic's RSP define strict triggers (ASL-3/ASL-4) for autonomous cyber-offense capabilities.</li>
+            <li>· The Alignment Problem: Steering systems smarter than their creators, preventing sycophancy, reward hacking, and deceptive scheming.</li>
           </ul>
         </div>
       </section>
 
+      {/* Timelines Section */}
       <section className="mx-auto max-w-7xl px-6 lg:px-10 py-20">
-        <div className="eyebrow">When? · Predictions from the people building it</div>
+        <div className="eyebrow">When? · Predictions from the builders</div>
         <h2 className="display mt-4 text-5xl">The timeline, in their own words.</h2>
         <div className="mt-12 grid md:grid-cols-2 gap-px bg-border border border-border rounded-3xl overflow-hidden">
           {TIMELINE.map((t) => (
-            <article key={t.who} className="bg-background p-8">
+            <article key={t.who} className="bg-background p-8 flex flex-col justify-between">
               <div className="flex items-baseline justify-between gap-4">
-                <h3 className="font-display text-2xl">{t.who}</h3>
+                <h3 className="font-display text-xl">{t.who}</h3>
                 <span className="font-mono text-sm text-ember">{t.year}</span>
               </div>
-              <div className="eyebrow mt-1">{t.role}</div>
-              <p className="mt-4 text-foreground/80 italic leading-relaxed">{t.quote}</p>
+              <p className="mt-4 text-xs text-foreground/80 italic leading-relaxed">“{t.quote}”</p>
             </article>
           ))}
         </div>
       </section>
 
+      {/* Cyber-physical safety warning */}
+      <section className="mx-auto max-w-7xl px-6 lg:px-10 py-12">
+        <div className="rounded-3xl bg-cream dark:bg-zinc-900 border border-border p-10 lg:p-16">
+          <div className="eyebrow">Existential Risk: Cyber-Physical Convergence</div>
+          <h2 className="display text-4xl lg:text-5xl mt-4 max-w-3xl">Machine-velocity conflict.</h2>
+          <p className="mt-6 text-sm text-foreground/80 leading-relaxed max-w-3xl">
+            In 2026, the convergence of IT and OT (Operational Technology) has created a <strong>strategic convergence of cyber-physical threats</strong>. Advanced Persistent Threat (APT) groups deploy AI-orchestrated attacks targeting critical national infrastructure: water treatment plants, regional power grids, and automated industrial control systems.
+          </p>
+          <p className="mt-4 text-sm text-foreground/80 leading-relaxed max-w-3xl">
+            Because AI systems can compile, scan, and deploy zero-day exploits autonomously at scale, the window for human intervention has shrunk from hours to milliseconds. Safe AGI development demands hardening physical infrastructure against autonomous cyber-penetration vectors.
+          </p>
+        </div>
+      </section>
+
+      {/* Benchmark reality check */}
       <section className="mx-auto max-w-7xl px-6 lg:px-10 py-12">
         <div className="eyebrow">Benchmark reality check · 2024 → 2026</div>
         <h2 className="display mt-4 text-5xl max-w-4xl">Two years. Almost every frontier benchmark fell.</h2>
         <div className="mt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {BENCHMARKS.map((b) => (
-            <div key={b.name} className="rounded-2xl border border-border p-6 bg-card">
+            <div key={b.name} className="rounded-2xl border border-border p-6 bg-card flex flex-col justify-between min-h-[140px]">
               <div className="eyebrow">{b.name}</div>
-              <p className="mt-3 text-sm text-foreground/60 line-through">{b.a}</p>
-              <p className="mt-1 font-display text-2xl text-ember">{b.b}</p>
+              <div className="mt-4">
+                <p className="text-[11px] text-foreground/60 line-through">{b.a}</p>
+                <p className="mt-1 font-display text-xl text-ember">{b.b}</p>
+              </div>
             </div>
           ))}
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 lg:px-10 py-16">
-        <div className="rounded-3xl bg-cream border border-border p-10 lg:p-16">
-          <div className="eyebrow">Two scenarios worth holding in mind</div>
-          <div className="mt-6 grid md:grid-cols-2 gap-10">
-            <div>
-              <h3 className="font-display text-3xl">The upside</h3>
-              <p className="mt-3 text-foreground/80 leading-relaxed">Most diseases cured. Personal AI tutors and doctors everywhere. Fusion power. Cheap, abundant materials. A renaissance of scientific discovery — Amodei's compress-100-years-of-biomedicine-into-10. Hundreds of millions of people freed from drudgery. The largest expansion of human flourishing in history.</p>
-            </div>
-            <div>
-              <h3 className="font-display text-3xl">The hazards</h3>
-              <p className="mt-3 text-foreground/80 leading-relaxed">Bio and cyber misuse (Bengio's International AI Safety Report 2025 calls these ‘near-term and concrete’). Mass disinformation at industrial scale. Concentration of economic and political power. The open alignment problem: how do we keep systems vastly smarter than us robustly pointed at what humans actually want?</p>
-            </div>
-          </div>
+      {/* Navigation Footer */}
+      <section className="mx-auto max-w-7xl px-6 lg:px-10 py-16 border-t border-border">
+        <div className="flex justify-between items-center">
+          <Link to="/humanity" className="text-sm text-foreground/60 hover:text-foreground">
+            ← Chapter 05: Humanity
+          </Link>
+          <Link to="/games" className="text-sm font-medium text-ember hover:underline">
+            Chapter 07: Games →
+          </Link>
         </div>
       </section>
     </PageShell>

@@ -4,9 +4,9 @@ import { PageShell } from "@/components/site-chrome";
 export const Route = createFileRoute("/infrastructure")({
   head: () => ({
     meta: [
-      { title: "Infrastructure & Energy — Silicon Epoch" },
-      { name: "description", content: "Gigawatt compute clusters, nuclear power grids, Blackwell and Rubin GPUs, and the physical substrate powering the AI revolution." },
-      { property: "og:title", content: "Infrastructure & Energy — Silicon Epoch" },
+      { title: "Infrastructure & Energy Grid — Silicon Epoch" },
+      { name: "description", content: "Gigawatt-scale datacenters, NVIDIA Rubin NVL72 specs, nuclear power agreements (Three Mile Island, Kairos SMR, Talen Susquehanna)." },
+      { property: "og:title", content: "Infrastructure & Energy Grid — Silicon Epoch" },
     ],
   }),
   component: Infrastructure,
@@ -15,71 +15,94 @@ export const Route = createFileRoute("/infrastructure")({
 const SUBSTRATES = [
   {
     eyebrow: "The Silicon Hardware",
-    title: "Blackwell Ultra, Rubin, & Domestic Chinese Nodes",
-    body: "The physical compute units are scaling rapidly. NVIDIA's Blackwell (B200/B300) and Blackwell Ultra are the current workhorses of frontier training runs. Rubin (announced for 2027) will transition to TSMC's 3nm and 2nm nodes, using HBM4 memory. In China, due to US export bans, labs train on domestic nodes like the Huawei Ascend 910C, fabricated locally using advanced multi-patterning techniques.",
+    title: "Vera Rubin NVL72, Groq 3, & Gaudi 3",
+    body: "AI accelerators are scaling transistor counts and interconnect bandwidth. The NVIDIA Blackwell B300 (192GB HBM3e) is being succeeded by the Vera Rubin NVL72 system (combining 72 Rubin R100 GPUs and 36 Vera CPUs) delivering 3.6 exaflops of FP4 compute. Alternative architectures like the Groq 3 LPX Rack leverage 128GB of aggregate ultra-low latency SRAM to bypass HBM memory bottlenecks entirely.",
     points: [
-      "NVIDIA Blackwell: 20-petaflops of FP4 compute per single GPU, scale-out up to 576-GPU clusters.",
-      "TSMC 2nm (N2): Entered volume production in late 2025; executing aggressive fab buildout in Taiwan.",
-      "Huawei Ascend 910C: China's domestic flagship; successfully runs 1,000-chip post-training clusters."
+      "NVIDIA Rubin R100: 336B transistors, 288GB HBM4, 22 TB/s bandwidth, 50 PFLOPS FP4 compute.",
+      "Intel Gaudi 3: 1,835 TFLOPS BF16, 128GB HBM2e, 3.7 TB/s bandwidth, priced disruptively at $15,625.",
+      "Groq 3 LPX Rack: 256 LPUs, 500MB SRAM each (128GB aggregate), 640 TB/s scale-up bandwidth.",
     ]
   },
   {
-    eyebrow: "The Megawatts",
-    title: "The Transition to Gigawatt-Scale Datacenters",
-    body: "A single frontier training run now demands a city's worth of power. Compute clusters are transitioning from 100-megawatt envelopes to gigawatt-scale. This has shifted the limiting factor of AI development from chip availability to grid connection speed and energy abundance.",
+    eyebrow: "The Gigawatt Campuses",
+    title: "From Megawatts to Dedicated Power Grids",
+    body: "Datacenter design has scaled past the megawatt envelope into multi-gigawatt campuses. Building queues for regional utility connections stretch up to five years, prompting AI developers to build their own generation infrastructure on-site, pre-leasing 60% of the 35 GW under construction in North America.",
     points: [
-      "Compute Density: A single Blackwell rack (NVL72) draws 120kW of power, requiring liquid cooling.",
-      "Grid Bottlenecks: Major US grids have queues of up to 5 years for connecting new datacenters.",
-      "Global Compute Capital: Memphis (xAI), Northern Virginia, and West Texas are the hotspots."
+      "Meta Prometheus & Hyperion: 1 GW Prometheus online by 2027 in Ohio; 5 GW Hyperion campus in Louisiana with $3B on-site gas generation.",
+      "xAI Colossus (Memphis): Running 100K H100s (150MW), expanding to 200K, with a long-term roadmap targeting 1M GPUs.",
+      "Microsoft & Google Buildouts: Microsoft Wisconsin ($7B) and Texas (2.1 GW); Google Oklahoma ($9B) and Michigan (1 GW).",
     ]
   },
-  {
-    eyebrow: "The Power Deals",
-    title: "AI Resurrects Nuclear Energy",
-    body: "Frontier labs require 24/7 carbon-free baseload power. This has triggered a historic alliance between AI hyperscalers and nuclear utility companies, bringing mothballed reactors back online and funding next-generation Small Modular Reactors (SMRs).",
-    points: [
-      "Microsoft & Constellation: A 20-year deal to restart the Three Mile Island Unit 1 reactor (835MW) solely for Microsoft AI.",
-      "Google & Kairos Power: An agreement to purchase power from a fleet of 500MW of Small Modular Reactors by 2030.",
-      "Amazon & Talen Energy: Acquisition of a 960MW nuclear-powered datacenter campus next to the Susquehanna plant."
-    ]
-  }
 ];
 
-const CLUSTERS = [
-  ["xAI Colossus 2", "Memphis, USA", "Gigawatt-scale", "Hundreds of thousands of NVIDIA H100/B200 GPUs. Currently training Grok 5."],
-  ["OpenAI / Microsoft Stargate", "Proposed / Undisclosed", "$500B build", "Planned multi-phase buildout utilizing dedicated nuclear reactors to support 10M+ GPUs by 2030."],
-  ["Meta MSL Cluster", "Oregon / Texas, USA", "600MW+", "Equipped with Llama 4 and Muse Spark training infrastructure, utilizing custom liquid-cooled architectures."],
-  ["DeepSeek Ascend Cluster", "Hangzhou, China", "Sovereign Node", "Utilizing domestic Chinese hardware and advanced algorithmic optimization to training models with 90% less power."],
+const NUCLEAR_DEALS = [
+  {
+    project: "Crane Clean Energy Center",
+    partners: "Constellation / Microsoft",
+    capacity: "835 MW",
+    timeline: "Restart 2027",
+    details: "Three Mile Island Unit 1 restart. $1.6B cost supported by a $1B DOE loan; secured under a 20-year Microsoft PPA.",
+  },
+  {
+    project: "Kairos Power SMRs",
+    partners: "Google / Kairos",
+    capacity: "500 MW",
+    timeline: "First deployment 2030",
+    details: "Hermes 2 SMR fleet (molten salt-cooled) in Oak Ridge, TN. First corporate Small Modular Reactor power purchase agreement.",
+  },
+  {
+    project: "Susquehanna Nuclear Campus",
+    partners: "Amazon / Talen Energy",
+    capacity: "1,920 MW",
+    timeline: "Through 2042",
+    details: "17-year PPA with front-of-the-meter grid transition in Spring 2026. Part of a $20B Amazon infrastructure investment.",
+  },
+  {
+    project: "Helion Fusion PPA",
+    partners: "Helion / Microsoft",
+    capacity: "≥50 MWe",
+    timeline: "2028 target",
+    details: "Polaris prototype completed 2024; Orion commercial plant planned in Chelan County, WA.",
+  },
+  {
+    project: "Meta Oklo SMR",
+    partners: "Meta / Oklo",
+    capacity: "1.2 GW",
+    timeline: "2030 target",
+    details: "16 Aurora reactors planned in Pike County, Ohio; 150 MW planned for Phase 1.",
+  },
 ];
 
 function Infrastructure() {
   return (
     <PageShell>
+      {/* Intro */}
       <section className="mx-auto max-w-7xl px-6 lg:px-10 pt-20 pb-12">
-        <div className="eyebrow">Chapter 09 · The grid · Updated June 2026</div>
-        <h1 className="display mt-6 text-[clamp(2.5rem,7vw,7rem)] max-w-6xl">
+        <div className="eyebrow">Chapter 09 · Infrastructure & Energy · Updated June 2026</div>
+        <h1 className="display mt-6 text-[clamp(2.5rem,7vw,7rem)] max-w-6xl leading-[0.95]">
           The physical substrate of <em className="italic text-ember">intelligence</em> is power.
         </h1>
         <p className="mt-8 max-w-3xl text-xl text-foreground/75 leading-relaxed">
-          AGI is not a cloud construct; it is a massive engineering project requiring thousands of tons of copper, millions of gallons of water, gigawatts of electricity, and the most advanced lithography machines on Earth. Here is the architecture of the physical grid.
+          AGI is not a virtual construct; it is a heavy industrial project requiring gigawatts of electricity, millions of gallons of water, and high-density liquid cooling infrastructure. Here is the layout of the physical grid.
         </p>
       </section>
 
+      {/* Substrates cards */}
       <section className="mx-auto max-w-7xl px-6 lg:px-10 pb-24 space-y-px bg-border border border-border rounded-3xl overflow-hidden">
         {SUBSTRATES.map((s, i) => (
           <article key={s.eyebrow} className="bg-background p-10 lg:p-14 grid lg:grid-cols-12 gap-10">
             <div className="lg:col-span-4">
               <div className="font-mono text-xs text-foreground/50">{String(i + 1).padStart(2, "0")}</div>
               <div className="eyebrow mt-2">{s.eyebrow}</div>
-              <h2 className="display mt-4 text-4xl lg:text-5xl">{s.title}</h2>
+              <h2 className="display mt-4 text-4xl lg:text-5xl leading-tight">{s.title}</h2>
             </div>
             <div className="lg:col-span-8">
-              <p className="text-lg text-foreground/80 leading-relaxed">{s.body}</p>
+              <p className="text-base text-foreground/80 leading-relaxed">{s.body}</p>
               <ul className="mt-6 space-y-3">
                 {s.points.map((p) => (
                   <li key={p} className="flex gap-3">
-                    <span className="text-ember mt-2">▸</span>
-                    <span className="text-foreground/80">{p}</span>
+                    <span className="text-ember mt-1 text-xs">▸</span>
+                    <span className="text-xs text-foreground/85 leading-relaxed">{p}</span>
                   </li>
                 ))}
               </ul>
@@ -88,38 +111,57 @@ function Infrastructure() {
         ))}
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 lg:px-10 pb-12">
-        <div className="eyebrow">Frontier AI Compute Clusters · June 2026</div>
-        <div className="mt-6 overflow-hidden rounded-2xl border border-border bg-card">
-          <table className="w-full text-left">
-            <thead className="bg-cream">
-              <tr className="text-sm">
-                <th className="p-4 font-medium">Cluster Name</th>
-                <th className="p-4 font-medium">Location</th>
-                <th className="p-4 font-medium">Power Scale</th>
-                <th className="p-4 font-medium">Key Hardware & Purpose</th>
-              </tr>
-            </thead>
-            <tbody className="text-sm">
-              {CLUSTERS.map((row) => (
-                <tr key={row[0]} className="border-t border-border">
-                  <td className="p-4 font-medium">{row[0]}</td>
-                  <td className="p-4 text-foreground/70">{row[1]}</td>
-                  <td className="p-4 text-foreground/70">{row[2]}</td>
-                  <td className="p-4 text-foreground/70">{row[3]}</td>
+      {/* Nuclear Deals Table */}
+      <section className="mx-auto max-w-7xl px-6 lg:px-10 py-12">
+        <div className="eyebrow">Energy Grid Integration</div>
+        <h2 className="display text-4xl lg:text-5xl mt-4 mb-8">Hyperscaler Nuclear Contracts</h2>
+        <div className="border border-border rounded-3xl overflow-hidden bg-background">
+          <div className="overflow-x-auto">
+            <table className="w-full text-left border-collapse text-sm">
+              <thead>
+                <tr className="border-b border-border bg-cream/40 dark:bg-zinc-900/40 text-xs font-mono uppercase text-muted-foreground">
+                  <th className="p-4 lg:p-6">Project Name</th>
+                  <th className="p-4 lg:p-6">Partners</th>
+                  <th className="p-4 lg:p-6">Capacity</th>
+                  <th className="p-4 lg:p-6">Timeline Target</th>
+                  <th className="p-4 lg:p-6">Details</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody className="divide-y divide-border/60">
+                {NUCLEAR_DEALS.map((d) => (
+                  <tr key={d.project} className="hover:bg-cream/20 dark:hover:bg-zinc-900/20 text-xs">
+                    <td className="p-4 lg:p-6 font-display font-medium text-sm text-ember">{d.project}</td>
+                    <td className="p-4 lg:p-6 font-mono">{d.partners}</td>
+                    <td className="p-4 lg:p-6 font-mono">{d.capacity}</td>
+                    <td className="p-4 lg:p-6 text-foreground/80">{d.timeline}</td>
+                    <td className="p-4 lg:p-6 text-foreground/75 leading-relaxed">{d.details}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
       </section>
 
+      {/* Energy Panel */}
       <section className="mx-auto max-w-7xl px-6 lg:px-10 pb-24">
         <div className="rounded-3xl bg-ink text-paper p-14 grain">
           <div className="grain-overlay" />
           <div className="eyebrow text-paper/60">The future of energy</div>
-          <h2 className="display text-4xl lg:text-6xl mt-3 max-w-4xl">The ultimate limiting factor of superintelligence is not chips, but sustainable energy.</h2>
-          <p className="mt-6 max-w-3xl text-paper/80 leading-relaxed">As compute demands triple every 8 months, the grid cannot adapt using standard coal or natural gas power. The labs that secure dedicated nuclear, geothermal, and solar reservoirs will dictate the pace of AGI development.</p>
+          <h2 className="display text-4xl lg:text-6xl mt-3 max-w-4xl">The ultimate limit of superintelligence is clean, baseload power.</h2>
+          <p className="mt-6 max-w-3xl text-paper/80 leading-relaxed text-sm">With AI compute demand doubling every 8 months, standard coal or natural gas grids cannot adapt. Hyperscalers who secure dedicated nuclear and geothermal reservoirs will determine the rate of scaling and the ultimate path to AGI.</p>
+        </div>
+      </section>
+
+      {/* Navigation Footer */}
+      <section className="mx-auto max-w-7xl px-6 lg:px-10 py-16 border-t border-border">
+        <div className="flex justify-between items-center">
+          <Link to="/next-decade" className="text-sm text-foreground/60 hover:text-foreground">
+            ← Chapter 08: Next Decade
+          </Link>
+          <Link to="/geopolitics" className="text-sm font-medium text-ember hover:underline">
+            Chapter 10: Geopolitics →
+          </Link>
         </div>
       </section>
     </PageShell>

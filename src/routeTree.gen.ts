@@ -20,6 +20,7 @@ import { Route as HowAiWorksRouteImport } from './routes/how-ai-works'
 import { Route as GeopoliticsRouteImport } from './routes/geopolitics'
 import { Route as GamesRouteImport } from './routes/games'
 import { Route as DataWallRouteImport } from './routes/data-wall'
+import { Route as ComputeRouteImport } from './routes/compute'
 import { Route as CompaniesRouteImport } from './routes/companies'
 import { Route as AgiAsiRouteImport } from './routes/agi-asi'
 import { Route as IndexRouteImport } from './routes/index'
@@ -79,6 +80,11 @@ const DataWallRoute = DataWallRouteImport.update({
   path: '/data-wall',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ComputeRoute = ComputeRouteImport.update({
+  id: '/compute',
+  path: '/compute',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const CompaniesRoute = CompaniesRouteImport.update({
   id: '/companies',
   path: '/companies',
@@ -99,6 +105,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/agi-asi': typeof AgiAsiRoute
   '/companies': typeof CompaniesRoute
+  '/compute': typeof ComputeRoute
   '/data-wall': typeof DataWallRoute
   '/games': typeof GamesRoute
   '/geopolitics': typeof GeopoliticsRoute
@@ -115,6 +122,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/agi-asi': typeof AgiAsiRoute
   '/companies': typeof CompaniesRoute
+  '/compute': typeof ComputeRoute
   '/data-wall': typeof DataWallRoute
   '/games': typeof GamesRoute
   '/geopolitics': typeof GeopoliticsRoute
@@ -132,6 +140,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/agi-asi': typeof AgiAsiRoute
   '/companies': typeof CompaniesRoute
+  '/compute': typeof ComputeRoute
   '/data-wall': typeof DataWallRoute
   '/games': typeof GamesRoute
   '/geopolitics': typeof GeopoliticsRoute
@@ -150,6 +159,7 @@ export interface FileRouteTypes {
     | '/'
     | '/agi-asi'
     | '/companies'
+    | '/compute'
     | '/data-wall'
     | '/games'
     | '/geopolitics'
@@ -166,6 +176,7 @@ export interface FileRouteTypes {
     | '/'
     | '/agi-asi'
     | '/companies'
+    | '/compute'
     | '/data-wall'
     | '/games'
     | '/geopolitics'
@@ -182,6 +193,7 @@ export interface FileRouteTypes {
     | '/'
     | '/agi-asi'
     | '/companies'
+    | '/compute'
     | '/data-wall'
     | '/games'
     | '/geopolitics'
@@ -199,6 +211,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AgiAsiRoute: typeof AgiAsiRoute
   CompaniesRoute: typeof CompaniesRoute
+  ComputeRoute: typeof ComputeRoute
   DataWallRoute: typeof DataWallRoute
   GamesRoute: typeof GamesRoute
   GeopoliticsRoute: typeof GeopoliticsRoute
@@ -291,6 +304,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DataWallRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/compute': {
+      id: '/compute'
+      path: '/compute'
+      fullPath: '/compute'
+      preLoaderRoute: typeof ComputeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/companies': {
       id: '/companies'
       path: '/companies'
@@ -319,6 +339,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AgiAsiRoute: AgiAsiRoute,
   CompaniesRoute: CompaniesRoute,
+  ComputeRoute: ComputeRoute,
   DataWallRoute: DataWallRoute,
   GamesRoute: GamesRoute,
   GeopoliticsRoute: GeopoliticsRoute,

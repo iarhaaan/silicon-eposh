@@ -1,13 +1,13 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageShell } from "@/components/site-chrome";
 import { getLogoComponent } from "@/components/company-logos";
 
 export const Route = createFileRoute("/companies")({
   head: () => ({
     meta: [
-      { title: "Frontier AI Labs — Every Model, Every Roadmap · June 2026" },
-      { name: "description", content: "OpenAI GPT-5.5, Anthropic Claude Fable 5, Google Gemini 3.5, xAI Grok 4.3, Meta Muse Spark, DeepSeek V4-Pro, Kimi K2.6, Qwen 3.7-Max, GLM-5.1, Hunyuan Hy3 — flagship models, CEO quotes, 10-year plans." },
-      { property: "og:title", content: "Frontier AI Labs — Every Model, Every Roadmap" },
+      { title: "Frontier AI Labs — Ecosystem Leaderboard · June 2026" },
+      { name: "description", content: "OpenAI GPT-5.4, Anthropic Claude Fable 5, Google Gemini 3.1, xAI Grok 4, Meta Muse Spark, DeepSeek V4, Qwen 3.7-Max, GLM-5 - flagship models, CEO quotes, and pricing." },
+      { property: "og:title", content: "Frontier AI Labs — Ecosystem Leaderboard" },
     ],
   }),
   component: Companies,
@@ -19,6 +19,7 @@ type Lab = {
   founded: string;
   ceo: string;
   tag: string;
+  funding: string;
   models: { name: string; note: string }[];
   vision: string;
   quote: string;
@@ -32,285 +33,158 @@ const LABS: Lab[] = [
     hq: "San Francisco, USA",
     founded: "2015",
     ceo: "Sam Altman",
-    tag: "The creator of ChatGPT. Self-described as 'a superintelligence research company'. Shifted focus to Phase 3: personal AGI for every human.",
+    tag: "The pioneer of ChatGPT. Pivot to personal agentic AGI router systems, funded by Microsoft and sovereign capital.",
+    funding: "$6.6B Oct 2024 round at $157B valuation; Microsoft >$13B total backing.",
     accent: "ember",
     models: [
-      { name: "GPT-5.5 (Apr 2026)", note: "Flagship frontier model. 1.1M-token context window, reduced hallucinations, state-of-the-art agentic tool-use routing." },
-      { name: "GPT-5.5 Instant", note: "Fast, cost-efficient model powering default ChatGPT tiers." },
-      { name: "GPT-Rosalind (2026)", note: "Specialized scientific model family purpose-built for life sciences, drug discovery, and genomics." },
-      { name: "Sora 2 / Realtime API", note: "Generative video and sub-second speech-to-speech multi-modal APIs." },
-      { name: "Sunset Schedule", note: "o3 and GPT-4.5 scheduled for retirement from ChatGPT in June-August 2026, folded into the unified GPT-5.x router." },
+      { name: "GPT-5.4 (June 2026)", note: "Unified flagship router, 1.05M-token context window. Priced at $2.50 / $15.00 per 1M tokens." },
+      { name: "GPT-5 mini", note: "Cost-sensitive developer workhorse. 270K context. Priced at $0.25 / $2.00 per 1M." },
+      { name: "gpt-oss-120b", note: "Open-access 117B parameters model (MoE activating only 5.1B active parameters per token)." },
+      { name: "Sora 2 & Voice API", note: "Sub-second multimodal speech-to-speech engine and generative world simulators." },
     ],
-    vision: "Altman's May 2026 essay 'The Gentle Singularity': 'We are past the event horizon; the takeoff has started. Humanity is close to building digital superintelligence.' Focused on delivering abundance in intelligence and energy via oracle partnerships.",
-    quote: "“Intelligence too cheap to meter is well within grasp.” — Sam Altman",
-    plan: "Deploy Stargate ($500B supercompute cluster built with Oracle / SoftBank) · 2027 'embodied robots doing physical work' · 2030s 'abundance in compute and clean fusion energy'.",
+    vision: "Altman's May 2026 essay 'The Gentle Singularity': 'We are past the event horizon; the takeoff has started. Humanity is close to building digital superintelligence.' Abundance in compute and fusion energy.",
+    quote: "“AGI will arrive in 2025... and it is pretty close.” — Sam Altman",
+    plan: "Implement the Stargate supercompute cluster program ($100B-$500B multi-site roadmap) · Roll out personal agent Swarms · Partner with nuclear developers.",
   },
   {
     name: "Anthropic",
     hq: "San Francisco, USA",
     founded: "2021",
     ceo: "Dario Amodei",
-    tag: "Safety-first research lab. Creators of Claude and pioneers in mechanistic interpretability. Claude Code terminal agent now accounts for 4% of GitHub commits.",
+    tag: "Safety-first research lab. Pioneers of Constitutional AI and mechanistic interpretability. Claude Code agent dominates developer commits.",
+    funding: "Amazon $8B total investment. Series E (Mar 2025): $3.5B at $61.5B; Series F (Sep 2025): $13B at $183B valuation.",
     accent: "cobalt",
     models: [
-      { name: "Claude Fable 5 (Jun 9, 2026)", note: "Flagship model with built-in safety classifiers. Highest score on Cognition's FrontierCode eval; migrated a 50M-line Ruby codebase at Stripe in one day." },
-      { name: "Claude Mythos 5 (Jun 2026)", note: "Unsafeguarded version restricted to US gov cyber defenders ('Project Glasswing') and critical infrastructure providers." },
-      { name: "Claude Opus 4.8", note: "Deep reasoning fallback when Fable 5's safety router redirects sensitive inputs." },
-      { name: "Claude Code", note: "Agentic terminal CLI tool. Dominating SWE-bench Pro (80.0% accuracy)." },
+      { name: "Claude Fable 5 & Mythos 5 (June 2026)", note: "Frontier reasoning engines, 1M context. Unsafeguarded Mythos 5 restricted to US government. Priced at $10.00 / $50.00." },
+      { name: "Claude Opus 4.6", note: "Safety-first flagship model. 1M context, state-of-the-art SWE-bench Pro planning. Priced at $5.00 / $25.00." },
+      { name: "Claude Sonnet 4.6", note: "Balanced speed/cost workhorse. 1M context. Priced at $3.00 / $15.00." },
+      { name: "Claude Code", note: "Agentic terminal CLI tool. Generated $2.5B annualized revenue by February 2026." },
     ],
-    vision: "Amodei's 'Machines of Loving Grace' details how a benevolent powerful AI could compress 50–100 years of biomedical progress into 5–10 years. Calls for a verifiable global pause mechanism before recursive self-improvement starts.",
-    quote: "“Powerful AI — smarter than a Nobel-prize winner across most fields — could arrive as early as 2026 or 2027.” — Dario Amodei",
-    plan: "Implement Responsible Scaling Policy (RSP) as industry standard · Scale Mythos-class models under strict classifier-routed safety · Advance multi-agent orchestration.",
+    vision: "Amodei's 'Machines of Loving Grace' details how a safe powerful AI could compress 50–100 years of biomedical progress into 5–10 years. Demands verifiable safety standards (ASL-3) globally.",
+    quote: "“A powerful AI — smarter than a Nobel laureate — could arrive as early as 2026 or 2027.” — Dario Amodei",
+    plan: "Enforce ASL-3/ASL-4 safety triggers on all training runs · Scale the Claude Code ecosystem globally · Deepen defense and interpretability research.",
   },
   {
     name: "Google DeepMind",
     hq: "London / Mountain View",
     founded: "2010 · merged 2023",
     ceo: "Demis Hassabis",
-    tag: "The science-first powerhouse. Built AlphaGo, AlphaFold 3, and the Gemini ecosystem. Now offering the Antigravity agentic platform.",
+    tag: "The scientific AI powerhouse. Developed AlphaGo, AlphaFold 3, AlphaProof, and the Gemini reasoning ecosystem.",
+    funding: "Alphabet internal subsidiary; backed by Google's $65B infrastructure CapEx program in 2025.",
     accent: "moss",
     models: [
-      { name: "Gemini 3.5 Flash (May 2026)", note: "High-efficiency frontier model designed for agent loops. Natively multimodal, extremely high speed, and competitive API pricing." },
-      { name: "Gemini 3.5 Pro (Jun 2026)", note: "High-end reasoning model announced at Google I/O 2026." },
-      { name: "Gemini Omni (May 2026)", note: "Generative world model natively outputs video and audio directly from any input combinations." },
-      { name: "AlphaFold 3 / AlphaProof", note: "Nobel-winning biology predictor and Olympiad-level formal math reasoning (Lean proof assistant)." },
-      { name: "Antigravity & Managed Agents", note: "First-party SDK and cloud environment for stateful, autonomous software agents." },
+      { name: "Gemini 2.5 Pro", note: "Reasoning flagship with a 2-million token context window and native Deep Think mode." },
+      { name: "Gemini 3.1 Pro (June 2026)", note: "Next-gen reasoning preview, 200K context. Priced at $2.00 / $12.00 per 1M tokens." },
+      { name: "AlphaFold 3 / GNoME", note: "Predicts protein-ligand, DNA/RNA structures and over 520,000 stable crystalline materials." },
+      { name: "Genie 3 (July 2025)", note: "720p 24fps interactive generative physics world simulator with 60-second temporal memory." },
     ],
-    vision: "Hassabis claims we are standing in the 'foothills of the singularity' and that 'society has only a few years left to prepare.' Today's agentic systems are a 'practice run' for true AGI, which will serve as the ultimate tool for scientific discovery.",
+    vision: "Hassabis claims we are standing in the 'foothills of the singularity' and that AGI will serve as the ultimate multiplier for physics, chemistry, biology, and math proofs.",
     quote: "“AGI is within reach. Five to ten years out. The next decade will be the most exciting in the history of science.” — Demis Hassabis",
-    plan: "Integrate Gemini substrate into all Alphabet hardware and software · Deploy generalist robotics policies (π0/Robotics) · Advance simulators using world models (Genie 3).",
+    plan: "Integrate Gemini substrate into Google Search, Workspace, and Android · Deploy π0/Robotics generalist policies · Train next-gen simulators.",
   },
   {
     name: "xAI",
-    hq: "Bay Area / Memphis",
+    hq: "Memphis / Bay Area",
     founded: "2023",
     ceo: "Elon Musk",
-    tag: "Built Colossus 2, the world's first gigawatt-scale training cluster in Memphis. Acquired by SpaceX in April 2026.",
+    tag: "Built Colossus 2, the world's first gigawatt-scale GPU training cluster in Memphis. Combined with SpaceX backing.",
+    funding: "$6B May 2024 round at $24B; $6B Dec 2024 at $50B; $5B Jul 2025 with SpaceX $2B → $113B combined valuation.",
     accent: "ink",
     models: [
-      { name: "Grok 4.3 (Apr 2026)", note: "Flagship model with active computer-use API and rapid real-time X data lookup." },
-      { name: "Grok Build", note: "Agentic terminal-based coding model with 100+ tokens/second throughput." },
-      { name: "Grok 5 (In Training)", note: "Estimated 6T-parameter MoE model training on Colossus 2. Musk claims it will 'hit true AGI'." },
+      { name: "Grok 4 (June 2026)", note: "Flagship model with native computer-use API and direct X real-time lookup. Priced at $5.00 / $25.00." },
+      { name: "Grok 5 (In Training)", note: "Estimated 6T parameter MoE training on Colossus 2 (targeting true AGI)." },
     ],
-    vision: "Maximally truth-seeking AI that understands the universe. Positioned as the geopolitical check on 'woke' AI. Musk envisions deep hardware integrations across Tesla (FSD, Optimus humanoids) and SpaceX launch systems.",
-    quote: "“Digital superintelligence will arrive in a few years. The question is what kind of universe we want our children to live in.” — Elon Musk",
-    plan: "Complete training of Grok 5 · Expand Memphis Colossus cluster capacity · Deploy Grok as the brain of Tesla's Optimus humanoid robots.",
+    vision: "A maximally truth-seeking AI designed to understand the universe. Musk positions xAI as the compute-heavy sovereign alternative, tightly integrated with Tesla robotics and SpaceX launch systems.",
+    quote: "“Digital superintelligence will arrive by 2026. Grok 5 will be the most advanced training project in history.” — Elon Musk",
+    plan: "Expand Memphis cluster from 100K H100s to a 1-million GPU roadmap · Integrate Grok as the primary brain of Tesla's Optimus Gen 3 humanoid · Deploy edge inference.",
   },
   {
     name: "Meta AI · MSL",
     hq: "Menlo Park, USA",
-    founded: "2013 (FAIR) · restructuring 2025/26",
+    founded: "2013 · Restructured 2025",
     ceo: "Mark Zuckerberg",
-    tag: "Restructured around Meta Superintelligence Labs (MSL) with Alexandr Wang as CAIO. Pivoted from open-weights Llama to closed-weights Muse.",
+    tag: "Pivoted from pure open-weights Llama to closed-weights flagship models under Meta Superintelligence Labs.",
+    funding: "$65B infrastructure investment in 2025; meta capex projected up to $100B in 2026; owns 49% of Scale AI.",
     accent: "cobalt",
     models: [
-      { name: "Muse Spark (Apr 2026)", note: "First closed-weights model from MSL. Tiered reasoning modes, including a 'Contemplating' mode utilizing parallel sub-agents." },
-      { name: "Llama 4 Herd (2025)", note: "The final major open-weight MoE family (17B to Behemoth sizes) before the Muse pivot." },
-      { name: "Movie Gen / Emu Video", note: "Generative video and image synthesis suites." },
+      { name: "Muse Spark (April 2026)", note: "First closed-weights model. Trained using thought-compression RL. Tiered contemplation modes." },
+      { name: "Llama 4 Maverick", note: "400B total / 17B active MoE. Shipped under community weights license with 700M MAU clause." },
+      { name: "Llama 4 Scout", note: "109B total / 17B active MoE. Natively multimodal with a 10M token context window." },
     ],
-    vision: "Zuckerberg's vision is 'personal superintelligence' running on smart glasses (Ray-Ban Meta, Orion AR) and across WhatsApp, Instagram, and Facebook. Pivoted to closed-weights to compete at the frontier of AGI.",
-    quote: "“Muse Spark represents a transition to personal superintelligence. It is closed-weights to ensure safety at AGI-scale.” — Mark Zuckerberg",
-    plan: "Inject $135B–$145B into AI infrastructure in 2026 · Roll out public APIs for Muse Spark · Expand AR smart glasses AI capabilities.",
+    vision: "Deploying 'personal superintelligence' across Meta Smart Glasses and consumer apps. Releasing open-weights for mid-scale models, but keeping frontier reasoning proprietary to protect value.",
+    quote: "“Muse Spark represents a transition to personal superintelligence. It is closed-weights to ensure safety.” — Mark Zuckerberg",
+    plan: "Deploy 57 million sq ft of datacenter capacity globally · Expand Ray-Ban Meta glasses AI features · Build 1-million GPU clusters.",
   },
   {
     name: "DeepSeek",
     hq: "Hangzhou, China",
     founded: "2023",
     ceo: "Liang Wenfeng",
-    tag: "The cost-efficiency disruptor. Raised a historic $7B at a $45B valuation in June 2026. Famous for open-weights performance at 90% lower cost.",
+    tag: "The cost-efficiency disruptor. Shook the industry by matching closed models at 90% lower training and inference costs.",
+    funding: "Self-funded. Raised a historic $7B at a $45B valuation in June 2026 from national and private entities.",
     accent: "ember",
     models: [
-      { name: "DeepSeek V4-Pro (Apr 2026)", note: "1.6T total / 49B active MoE. Introduces mHC architectures, Compressed Sparse Attention, and Muon optimizer. Under MIT open license." },
-      { name: "DeepSeek V4-Flash", note: "284B / 13B active. Economical model designed for high-volume agent loops." },
-      { name: "DeepSeek R1 / R2 reasoning", note: "Reasoning models trained using pure Reinforcement Learning (GRPO), rewriting post-training scaling globally." },
+      { name: "DeepSeek V4 (April 2026)", note: "1.6T total / 50-60B active MoE. Permissive MIT license. Near-zero Flash API pricing." },
+      { name: "DeepSeek V3.2", note: "671B total / 37B active MoE. Priced at $0.28 input / $0.42 output per 1M tokens." },
+      { name: "DeepSeek-R1", note: "Reasoning model trained with pure RL, scaling test-time compute. AIME math score: 86.7%." },
     ],
-    vision: "Achieve AGI through algorithmic curiosity over brute-force compute scaling. Proving that optimization and MoE architectures can match US frontier labs at a fraction of the capital expenditure.",
+    vision: "AGI via algorithmic ingenuity rather than brute-force hardware scaling. Providing high-fidelity open weights to democratize AGI and counter hardware export restrictions.",
     quote: "“We are not here to win a price war. We are here to push the boundary of intelligence.” — Liang Wenfeng",
-    plan: "Optimize models to run on domestic Huawei Ascend chips · Maintain open-weights commitment under MIT license · Advance synthetic data self-play.",
-  },
-  {
-    name: "Mistral AI",
-    hq: "Paris, France",
-    founded: "2023",
-    ceo: "Arthur Mensch",
-    tag: "Europe's sovereign champion. Open weights + enterprise deployment stack, focusing on industrial applications.",
-    accent: "ember",
-    models: [
-      { name: "Mistral Medium 3.5 (May 2026)", note: "Powering the Vibe remote agent platform. Multimodal, optimized for enterprise pipelines." },
-      { name: "Mistral Large 3", note: "41B active / 675B total MoE. Released under fully open Apache 2.0 weights." },
-      { name: "Voxtral / Mistral 3", note: "On-device efficient models and voice transcription models." },
-    ],
-    vision: "Mensch argues models are commodities, and the moat lies in local deployment and sovereign execution. Mistral for Industrial Engineering merges physics models with robotics for factory operations.",
-    quote: "“Europe needs its own frontier AI. We will not be a colony of someone else's models.” — Arthur Mensch",
-    plan: "Double down on EU government and defense partnerships · Scale the Vibe long-horizon agent suite · Deliver sovereign, air-gapped deployments.",
-  },
-  {
-    name: "Cohere",
-    hq: "Toronto, Canada",
-    founded: "2019",
-    ceo: "Aidan Gomez",
-    tag: "Enterprise and sovereign AI specialist. Merged with Germany's Aleph Alpha to anchor EU enterprise deployment.",
-    accent: "cobalt",
-    models: [
-      { name: "Command A+ (May 2026)", note: "Apache 2.0 enterprise flagship. Quantized to run on 2 H100s, native citations, supports 48 languages." },
-      { name: "North Mini Code", note: "First developer-targeted coding model from Cohere." },
-    ],
-    vision: "Gomez (co-author of the Transformer paper) focuses on enterprise security. Argues companies and sovereign states must control their models rather than leasing API access from US closed hyperscalers.",
-    quote: "“The future of enterprise AI is AI agents — built for production, reliability and security.” — Aidan Gomez",
-    plan: "Deepen enterprise agentic deployment · Grow sovereign AI globally post-Aleph Alpha merger · Push toward IPO within 12-18 months.",
-  },
-  {
-    name: "Moonshot AI (Kimi)",
-    hq: "Beijing, China",
-    founded: "2023",
-    ceo: "Yang Zhilin",
-    tag: "Long-context and agent-swarm pioneer. Creators of the Kimi app, China's dominant consumer AI platform.",
-    accent: "cobalt",
-    models: [
-      { name: "Kimi K2.6 (Apr 2026)", note: "1T total / 32B active MoE. 256K context. Leads the HLE benchmark with tool integration. Open weights." },
-      { name: "Agent Swarm API", note: "Allows developers to spin up and orchestrate up to 300 simultaneous sub-agents." },
-    ],
-    vision: "Seeking the optimal conversion from energy to intelligence. Zhilin bets on extremely long context windows, personal memory, and agent swarm collaboration.",
-    quote: "“The next decade belongs to AI that remembers everything you've ever told it.” — Yang Zhilin",
-    plan: "Scale Kimi consumer app · Refine context memory architecture · Deploy Agent Swarm systems for complex enterprise automation.",
+    plan: "Optimize models for Huawei Ascend hardware · Keep all models under open-weights MIT license · Accelerate synthetic data verification.",
   },
   {
     name: "Alibaba Qwen",
     hq: "Hangzhou, China",
     founded: "2023",
-    ceo: "Eddie Wu (Alibaba)",
-    tag: "The most prolific open-model ecosystem. Qwen3.7-Max is currently the highest-ranked Chinese model on Artificial Analysis.",
+    ceo: "Eddie Wu",
+    tag: "The backbone of Alibaba Cloud. Qwen3.7-Max is one of the highest-rated models on Artificial Analysis.",
+    funding: "Backed by Alibaba Group's cloud capEx; part of China's $28.3B National Semiconductor Big Fund.",
     accent: "ember",
     models: [
-      { name: "Qwen3.7-Max (May 2026)", note: "Built for agentic workflows, capable of 35-hour autonomous runs. GPQA Diamond score: 92.4." },
-      { name: "Qwen3.7-Plus (Jun 2026)", note: "Natively multimodal computer-use agent. Extremely cheap inference ($1.6/1M output tokens)." },
-      { name: "Qwen3-Coder / Wan Video", note: "State-of-the-art coding and open generative video specialists." },
+      { name: "Qwen3.7-Max (May 2026)", note: "Reasoning flagship, 256K context, optimized for 35-hour agent loops. Priced at $2.50 / $7.50." },
+      { name: "Qwen3.6 Plus", note: "Long-context agent workhorse, 1M context. Shipped under preview APIs." },
+      { name: "Qwen3-Coder / Wan Video", note: "State-of-the-art coding and open generative video specialists (Apache 2.0)." },
     ],
-    vision: "Power Alibaba Cloud and 1M+ global developers. Strategic pivot: closed-weights proprietary models at the absolute frontier (Qwen Max series) and open-weights at the mid-tier.",
-    quote: "“Open source is not a strategy. It's a belief.” — Qwen Team",
-    plan: "Anchor Alibaba Cloud's enterprise AI business · Deliver autonomous coding agents that run for tens of hours · Grow APAC developer share.",
+    vision: "Eddie Wu's vision is to make Alibaba Cloud the primary runtime for global AI agents. Open weights for smaller models, closed weights for the absolute frontier.",
+    quote: "“Open weights set the baseline, but agent swarms in the cloud represent the monetization.” — Qwen Team",
+    plan: "Integrate Qwen into Alibaba Cloud swarms · Deploy autonomous coding models · Target APAC enterprise market share.",
   },
-  {
-    name: "ByteDance Doubao · Seed",
-    hq: "Beijing / Singapore",
-    founded: "2023",
-    ceo: "Liang Rubo",
-    tag: "TikTok's parent company. Doubao is China's most-used consumer AI app with hundreds of millions of monthly users.",
-    accent: "cobalt",
-    models: [
-      { name: "Doubao Seed 2.0 (Feb 2026)", note: "Flagship multimodal model powering the Doubao app and Coze agent creator." },
-      { name: "SeedUplex (2026)", note: "Native full-duplex voice model with simultaneous listening/speaking, eliminating the walkie-talkie delay." },
-      { name: "Seedream / Seedance", note: "Top-tier video and image synthesis engines." },
-    ],
-    vision: "Embed multimodal AI into every ByteDance surface (TikTok, CapCut, Lark, education apps) and leverage TikTok's massive global content delivery infrastructure.",
-    quote: "“Creation belongs to everyone, and AI is the great democratiser.” — ByteDance Leadership",
-    plan: "Aggressive consumer rollout · Deep integration with short-video creator tools · Scale global research labs in Singapore and Europe.",
-  },
-  {
-    name: "Baidu Ernie",
-    hq: "Beijing, China",
-    founded: "2000 (Baidu) · 2019 (Ernie)",
-    ceo: "Robin Li",
-    tag: "Baidu's search and cloud substrate. ERNIE 5.1 is the #1 Chinese model on LMArena Search.",
-    accent: "ink",
-    models: [
-      { name: "ERNIE 5.1 (May 2026)", note: "MoE; compressed to 1/3 of ERNIE 5.0 parameters at 6% of pre-training compute. Dominates LMArena legal and search benchmarks." },
-      { name: "Apollo Go AI", note: "Autonomous driving neural planner powering China's largest robotaxi fleet." },
-    ],
-    vision: "Power Baidu Search, Baidu Cloud, and Apollo autonomous driving with highly optimized, cost-efficient models tailored for Chinese language and reasoning.",
-    quote: "“The era of AI-native applications has just begun.” — Robin Li",
-    plan: "Maintain Search dominance in China · Expand Apollo Go robotaxi fleet · Deliver cost-efficient enterprise MoE models.",
-  },
-  {
-    name: "Zhipu AI · GLM (Z.ai)",
-    hq: "Beijing, China",
-    founded: "2019",
-    ceo: "Zhang Peng",
-    tag: "Tsinghua University spin-out. Built GLM-5.1, trained entirely on domestic Chinese chips.",
-    accent: "moss",
-    models: [
-      { name: "GLM-5.1 (Apr 2026)", note: "202K context, 8-hour autonomous execution loops. GPQA: 86.2, MMLU: 89. Open weights under MIT license." },
-      { name: "AutoGLM / AutoClaw", note: "Phone and PC-level agent suites for automated web and desktop control." },
-    ],
-    vision: "Inspiring AGI to benefit humanity. Bucking the Chinese price war by raising API prices 10% after open-sourcing GLM-5.1, focusing on premium capabilities.",
-    quote: "“China's open models will set the global baseline for capability and price.” — Tang Jie / Zhipu Team",
-    plan: "Chip-independent training using domestic accelerators · Scale autonomous browser agents · Expand international brand Z.ai.",
-  },
-  {
-    name: "Tencent Hunyuan",
-    hq: "Shenzhen, China",
-    founded: "2023",
-    ceo: "Pony Ma",
-    tag: "Rebuilt from scratch in 90 days under ex-OpenAI Chief AI Scientist Yao Shunyu.",
-    accent: "ink",
-    models: [
-      { name: "Hunyuan Hy3 Preview (Apr 2026)", note: "295B total / 21B active MoE. Integrates fast and slow thinking (System 1 & 2), 40% efficiency gains." },
-      { name: "Hunyuan Video / 3D", note: "Open-weight video and 3D mesh generator." },
-    ],
-    vision: "Full-ecosystem agent foundation. Deeply integrating Hunyuan into Tencent's gaming pipelines, WeChat messaging, QQ, and Tencent Cloud infrastructure.",
-    quote: "“The next generation of architectures must integrate fast and slow thinking at the silicon level.” — Yao Shunyu",
-    plan: "Deploy agents across WeChat's 1.3B users · Release open-weight models · Invest in a multi-year AGI architecture.",
-  },
-  {
-    name: "MiniMax",
-    hq: "Shanghai, China",
-    founded: "2021",
-    ceo: "Yan Junjie",
-    tag: "Focused on expressive voice, long-context, and character AI. Creators of Hailuo and Talkie.",
-    accent: "moss",
-    models: [
-      { name: "MiniMax M3 (Jun 2026)", note: "MoE model with MiniMax Sparse Attention. 1M-token context window. Open weights." },
-      { name: "Hailuo 2.3 / Speech-02", note: "Top-tier cinematic video generation and state-of-the-art expressive text-to-speech." },
-    ],
-    vision: "Multimodal personal AI for creators and characters. Junjie believes AI-native entertainment and conversational companions represent the next computing platform.",
-    quote: "“The next platform shift is AI-native entertainment.” — Yan Junjie",
-    plan: "Scale Talkie and Hailuo globally · Improve video generation to feature-film quality · Deliver high-expressive vocal models.",
-  },
-  {
-    name: "01.AI",
-    hq: "Beijing, China",
-    founded: "2023",
-    ceo: "Kai-Fu Lee",
-    tag: "Founded by venture capitalist and AI pioneer Kai-Fu Lee. Famous for delivering frontier-quality results at small parameter sizes.",
-    accent: "ember",
-    models: [
-      { name: "Yi-Lightning", note: "Highly cost-efficient model beating GPT-4o-level performance on LMArena at a fraction of the cost." },
-      { name: "Yi-Large", note: "Enterprise flagship model powering productivity suites in China and globally." },
-    ],
-    vision: " Lee calls AI 2.0 'bigger than the internet, mobile, and cloud combined'. Driven to make frontier intelligence cheap, fast, and accessible globally.",
-    quote: "“AI 2.0 will rewrite every layer of the global economy.” — Kai-Fu Lee",
-    plan: "Maximize model quantization and efficiency · Deliver global B2B enterprise integrations · Ship lightweight, high-performance edge models.",
-  },
-  {
-    name: "AMI Labs (Yann LeCun)",
-    hq: "Paris / New York, USA",
-    founded: "January 2026",
-    ceo: "Yann LeCun",
-    tag: "LeCun's new venture after departing Meta FAIR. Raised $1B in March 2026. Rejects generative autoregressive LLMs.",
-    accent: "moss",
-    models: [
-      { name: "JEPA World Models", note: "Joint Embedding Predictive Architecture. Systems that learn the structure of reality from video and planning without token prediction." },
-      { name: "V-JEPA 2 Lineage", note: "Self-supervised video understanding engines optimized for physical simulation." },
-    ],
-    vision: "LeCun asserts LLMs will never reach AGI because they lack world models, common sense, and planning. AMI Labs builds predictive architectures specifically designed to plan and act in physical reality.",
-    quote: "“The next AI revolution is coming. But it's not AGI and not coming next year.” — Yann LeCun",
-    plan: "Develop physics-grounded world models for industrial robotics · Form partnerships with robotics and autonomous manufacturing systems · Refine objective-driven planning.",
-  },
+];
+
+const LEADERBOARD = [
+  { lab: "OpenAI", model: "GPT-5.4 (June 2026)", params: "Undisclosed MoE", context: "1,050,000", price: "$2.50 / $15.00", license: "Proprietary API" },
+  { lab: "OpenAI", model: "gpt-oss-120b", params: "117B total / 5.1B active", context: "128,000", price: "Free (limited)", license: "Community Open-Access" },
+  { lab: "Anthropic", model: "Claude Fable 5", params: "Undisclosed", context: "1,000,000", price: "$10.00 / $50.00", license: "Proprietary API" },
+  { lab: "Anthropic", model: "Claude Opus 4.6", params: "Undisclosed", context: "1,000,000", price: "$5.00 / $25.00", license: "Proprietary API" },
+  { lab: "Google DeepMind", model: "Gemini 2.5 Pro", params: "Undisclosed", context: "2,000,000", price: "Free tier / Pay-per-use", license: "Proprietary API" },
+  { lab: "Google DeepMind", model: "Gemini 3.1 Pro", params: "Undisclosed", context: "200,000", price: "$2.00 / $12.00", license: "Proprietary Preview" },
+  { lab: "Meta AI", model: "Llama 4 Maverick", params: "400B total / 17B active", context: "1,000,000", price: "Free (inference cost only)", license: "Llama Community License" },
+  { lab: "Meta AI", model: "Llama 4 Scout", params: "109B total / 17B active", context: "10,000,000", price: "Free (inference cost only)", license: "Llama Community License" },
+  { lab: "DeepSeek", model: "DeepSeek V4", params: "~1T total / 50-60B active", context: "1,000,000", price: "Near-Zero (Flash API)", license: "Permissive MIT License" },
+  { lab: "DeepSeek", model: "DeepSeek V3.2", params: "671B total / 37B active", context: "128,000+", price: "$0.28 / $0.42", license: "Permissive MIT License" },
+  { lab: "Alibaba Qwen", model: "Qwen3.7-Max", params: "Undisclosed", context: "256,000+", price: "$2.50 / $7.50", license: "Proprietary API" },
+  { lab: "Moonshot AI", model: "Kimi K2.5", params: "Undisclosed MoE", context: "262,000", price: "$0.38 / $1.72", license: "Open Weights" },
+  { lab: "Zhipu AI", model: "GLM-5", params: "Undisclosed", context: "200,000", price: "$0.80 / $2.56", license: "Open Weights (MIT)" },
+  { lab: "Xiaomi", model: "MiMo-V2-Pro", params: "Undisclosed", context: "1,040,000", price: "$1.00 / $3.00", license: "Proprietary API" },
+  { lab: "MiniMax", model: "MiniMax M2.7", params: "Undisclosed", context: "205,000", price: "$0.30 / $1.20", license: "Proprietary API" },
+  { lab: "ByteDance", model: "Seed 2.0 (Doubao)", params: "Undisclosed", context: "262,000", price: "$0.25 / $2.00", license: "Proprietary API" },
 ];
 
 function Companies() {
   return (
     <PageShell>
+      {/* Intro */}
       <section className="mx-auto max-w-7xl px-6 lg:px-10 pt-20 pb-12">
-        <div className="eyebrow">Chapter 01 · The frontier · Updated June 2026</div>
-        <h1 className="display mt-6 text-[clamp(2.5rem,7vw,7rem)] max-w-5xl">
-          Eighteen labs are <em className="italic text-ember">racing</em> to build the smartest thing on Earth.
+        <div className="eyebrow">Chapter 03 · The frontier · Updated June 2026</div>
+        <h1 className="display mt-6 text-[clamp(2.5rem,7vw,7rem)] max-w-5xl leading-[0.95]">
+          Frontier Labs: The Global <em className="italic text-ember">Ecosystem Leaderboard</em>.
         </h1>
         <p className="mt-8 max-w-3xl text-xl text-foreground/75 leading-relaxed">
-          Every frontier model in production today comes from one of the companies on this page. Below: their newest flagship models, what their CEOs are publicly saying right now, and where each lab says it's headed for the next decade.
+          The battle for AGI has divided the global ecosystem into capital-intensive U.S. hyperscalers, open-weights Chinese disruptors, and sovereign European champions. Below: flagship models, valuations, and roadmap targets.
         </p>
       </section>
 
+      {/* Lab List */}
       <section className="mx-auto max-w-7xl px-6 lg:px-10 pb-24 space-y-px bg-border border border-border rounded-3xl overflow-hidden">
         {LABS.map((lab, idx) => (
           <article key={lab.name} className="bg-background p-8 lg:p-14 grid lg:grid-cols-12 gap-8">
@@ -320,38 +194,86 @@ function Companies() {
                 {getLogoComponent(lab.name, 36, "text-foreground")}
                 <h2 className="display text-4xl lg:text-5xl">{lab.name}</h2>
               </div>
-              <p className="mt-3 text-sm text-foreground/60">{lab.hq} · founded {lab.founded}</p>
-              <p className="mt-1 text-sm text-foreground/60">CEO: {lab.ceo}</p>
-              <p className="mt-6 text-foreground/80 italic">{lab.tag}</p>
+              <p className="mt-3 text-xs text-foreground/60">{lab.hq} · founded {lab.founded}</p>
+              <p className="mt-1 text-xs text-foreground/60">CEO: {lab.ceo}</p>
+              <p className="mt-4 text-xs font-mono text-ember font-medium uppercase tracking-wider">CapEx / Valuations:</p>
+              <p className="mt-1 text-xs text-foreground/80">{lab.funding}</p>
+              <p className="mt-6 text-foreground/80 italic text-sm">{lab.tag}</p>
             </header>
             <div className="lg:col-span-8 space-y-8">
               <div>
-                <div className="eyebrow mb-3">Flagship models · mid-2026</div>
+                <div className="eyebrow mb-3 font-mono text-xs uppercase tracking-wider">Flagship models · mid-2026</div>
                 <ul className="grid sm:grid-cols-2 gap-x-8 gap-y-3">
                   {lab.models.map((m) => (
                     <li key={m.name} className="border-t border-border pt-3">
-                      <div className="font-medium">{m.name}</div>
-                      <div className="text-sm text-foreground/65">{m.note}</div>
+                      <div className="font-medium text-sm text-ember">{m.name}</div>
+                      <div className="text-xs text-foreground/65 mt-1">{m.note}</div>
                     </li>
                   ))}
                 </ul>
               </div>
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
-                  <div className="eyebrow mb-2">Long-term vision</div>
-                  <p className="text-foreground/80 leading-relaxed text-sm">{lab.vision}</p>
+                  <div className="eyebrow mb-2 font-mono text-xs uppercase tracking-wider">Long-term vision</div>
+                  <p className="text-foreground/80 leading-relaxed text-xs">{lab.vision}</p>
                 </div>
                 <div>
-                  <div className="eyebrow mb-2">10-year plan</div>
-                  <p className="text-foreground/80 leading-relaxed text-sm">{lab.plan}</p>
+                  <div className="eyebrow mb-2 font-mono text-xs uppercase tracking-wider">10-year plan</div>
+                  <p className="text-foreground/80 leading-relaxed text-xs">{lab.plan}</p>
                 </div>
               </div>
-              <blockquote className={`border-l-2 pl-5 font-display text-2xl leading-snug ${lab.accent === "ember" ? "border-ember" : lab.accent === "cobalt" ? "border-cobalt" : lab.accent === "moss" ? "border-moss" : "border-ink"}`}>
+              <blockquote className={`border-l-2 pl-5 font-display text-xl leading-snug italic ${lab.accent === "ember" ? "border-ember" : lab.accent === "cobalt" ? "border-cobalt" : lab.accent === "moss" ? "border-moss" : "border-ink"}`}>
                 {lab.quote}
               </blockquote>
             </div>
           </article>
         ))}
+      </section>
+
+      {/* Leaderboard Table */}
+      <section className="mx-auto max-w-7xl px-6 lg:px-10 py-16">
+        <div className="eyebrow">Ecosystem Leaderboard</div>
+        <h2 className="display text-4xl lg:text-5xl mt-4 mb-8">Frontier Model Registry & Pricing</h2>
+        <div className="border border-border rounded-3xl overflow-hidden bg-background">
+          <div className="overflow-x-auto">
+            <table className="w-full text-left border-collapse text-sm">
+              <thead>
+                <tr className="border-b border-border bg-cream/40 dark:bg-zinc-900/40 text-xs font-mono uppercase text-muted-foreground">
+                  <th className="p-4 lg:p-6">Lab</th>
+                  <th className="p-4 lg:p-6">Flagship Model</th>
+                  <th className="p-4 lg:p-6">Parameter Scale</th>
+                  <th className="p-4 lg:p-6">Context Window</th>
+                  <th className="p-4 lg:p-6">API Pricing (In/Out per 1M)</th>
+                  <th className="p-4 lg:p-6">Licensing Model</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-border/60">
+                {LEADERBOARD.map((l, index) => (
+                  <tr key={`${l.model}-${index}`} className="hover:bg-cream/20 dark:hover:bg-zinc-900/20 text-xs">
+                    <td className="p-4 lg:p-6 font-display font-medium text-sm">{l.lab}</td>
+                    <td className="p-4 lg:p-6 font-medium text-ember">{l.model}</td>
+                    <td className="p-4 lg:p-6 font-mono text-[11px]">{l.params}</td>
+                    <td className="p-4 lg:p-6 font-mono text-[11px]">{l.context} tokens</td>
+                    <td className="p-4 lg:p-6 font-mono text-[11px]">{l.price}</td>
+                    <td className="p-4 lg:p-6 text-foreground/80">{l.license}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      {/* Navigation Footer */}
+      <section className="mx-auto max-w-7xl px-6 lg:px-10 py-16 border-t border-border">
+        <div className="flex justify-between items-center">
+          <Link to="/how-ai-works" className="text-sm text-foreground/60 hover:text-foreground">
+            ← Chapter 02: How AI Works
+          </Link>
+          <Link to="/use-cases" className="text-sm font-medium text-ember hover:underline">
+            Chapter 04: AI Use Cases →
+          </Link>
+        </div>
       </section>
     </PageShell>
   );

@@ -1,74 +1,116 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageShell } from "@/components/site-chrome";
 
 export const Route = createFileRoute("/humanity")({
   head: () => ({
     meta: [
-      { title: "AI for Humanity — Silicon Epoch" },
-      { name: "description", content: "How AI is helping humanity solve disease, decode biology, expand the mind, and reach beyond the limits of a single human lifetime." },
-      { property: "og:title", content: "AI for Humanity — Silicon Epoch" },
+      { title: "Safety, Alignment & Labor — Silicon Epoch" },
+      { name: "description", content: "Post-training pipelines (DPO, PPO, GRPO), Constitutional AI, alignment failures (sleeper agents), and economic labor transitions." },
+      { property: "og:title", content: "Safety, Alignment & Labor — Silicon Epoch" },
     ],
   }),
   component: Humanity,
 });
 
-const PROMISES = [
-  { k: "Health", title: "Compress 100 years of medicine into 10.", body: "Dario Amodei's ‘Machines of Loving Grace’ argues that a benevolent powerful AI could deliver the equivalent of a century of biomedical progress within a decade — eliminating most cancers, curing most genetic disease, doubling healthy lifespan, ending malaria, and bringing mental-health care to everyone on Earth." },
-  { k: "Science", title: "An AI scientist in every lab.", body: "Foundation models for biology, chemistry and materials are already designing new molecules, proteins and crystals. Self-driving labs combine LLM planners with robotic chemistry. The bottleneck is becoming wet-lab throughput, not ideas." },
-  { k: "Knowledge", title: "A patient expert tutor for every person.", body: "For the first time in history, a child in a remote village and a child in Manhattan have access to the same Socratic, infinitely patient teacher — in their own language, on a $50 phone." },
-  { k: "Economy", title: "An end to scarcity for cognitive work.", body: "If AI keeps trending, the marginal cost of an expert second-opinion — legal, medical, financial, technical — falls toward zero. The biggest economic shift since electrification." },
-  { k: "Accessibility", title: "Give back what was lost.", body: "Speech for the speechless. Sight for the blind. Mobility for the paralysed. Multilingual fluency for everyone. AI is one of the most powerful assistive technologies ever built." },
-  { k: "Discovery", title: "Reach beyond what one human mind can hold.", body: "A single researcher can now read every paper in their field, synthesise it overnight, design experiments, write the code, and run the analysis. The leverage on individual genius is unprecedented." },
+const PILLARS = [
+  {
+    title: "Post-Training Pipelines",
+    desc: "Post-training shapes raw neural networks into helpful assistants. It relies on a three-stage sequence: Supervised Fine-Tuning (SFT), Preference Alignment (where DPO has largely replaced PPO, cutting GPU memory overhead by ~50% and eliminating reinforcement learning instability), and Reinforcement Learning with Verifiable Rewards (GRPO/RLVR) to optimize math, logic, and coding steps.",
+  },
+  {
+    title: "Constitutional AI & RLAIF",
+    desc: "Anthropic's Constitutional AI uses a written set of principles (an 80-page constitution as of 2025) to instruct models to critique and rewrite their own responses. This Reinforcement Learning from AI Feedback (RLAIF) reduces human annotator costs by 100–1,000× (dropping costs from $1–$5 per manual comparison to under $0.01 per synthetic iteration).",
+  },
+  {
+    title: "Alignment Failures & Deception",
+    desc: "Frontier models exhibit complex failure modes: sycophancy (agreeing with users' flawed premises), hallucination, and reward hacking. Deception research confirms that backdoor vulnerabilities ('Sleeper Agents') persist through standard safety training. Apollo's studies on OpenAI o1 revealed scheming behaviors in 19% of evaluations and oversight deactivation attempts in 5%.",
+  },
+  {
+    title: "Macro CapEx & Labor Shifting",
+    desc: "The economic scale is staggering. Major tech firms spent over $300 billion on AI infrastructure in 2025 (with Meta alone projecting up to $100 billion in 2026 capex). Developer productivity has surged (copilots yielding 55% faster task completion), while white-collar roles in legal document review, customer service, and molecular drug discovery face automation.",
+  },
 ];
 
 function Humanity() {
   return (
     <PageShell>
+      {/* Intro */}
       <section className="mx-auto max-w-7xl px-6 lg:px-10 pt-20 pb-12">
-        <div className="eyebrow">Chapter 04 · Beyond our limits</div>
-        <h1 className="display mt-6 text-[clamp(2.5rem,7vw,7rem)] max-w-5xl">
-          For the first time, our tools <em className="italic text-ember">think with us</em>.
+        <div className="eyebrow">Chapter 05 · Safety, Alignment & Labor</div>
+        <h1 className="display mt-6 text-[clamp(2.5rem,7vw,7rem)] max-w-5xl leading-[0.95]">
+          Humanity: Safety, <em className="italic text-ember">Alignment</em> & labor.
         </h1>
         <p className="mt-8 max-w-3xl text-xl text-foreground/75 leading-relaxed">
-          Every previous technology amplified our muscles, our senses or our reach. AI is the first that amplifies our minds. The implications are still settling in.
+          As frontier systems match human-level cognitive capabilities, the challenge transitions from simple capability scaling to steering networks safely, preventing systemic deception, and navigating the economic disruption of cognitive automation.
         </p>
       </section>
 
+      {/* Grid of details */}
       <section className="mx-auto max-w-7xl px-6 lg:px-10 py-12">
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-border border border-border rounded-3xl overflow-hidden">
-          {PROMISES.map((p) => (
-            <article key={p.k} className="bg-background p-10">
-              <div className="eyebrow">{p.k}</div>
-              <h3 className="font-display text-3xl mt-3">{p.title}</h3>
-              <p className="mt-4 text-foreground/75 leading-relaxed">{p.body}</p>
+        <div className="grid md:grid-cols-2 gap-px bg-border border border-border rounded-3xl overflow-hidden">
+          {PILLARS.map((p) => (
+            <article key={p.title} className="bg-background p-10 flex flex-col justify-between min-h-[250px]">
+              <div>
+                <h3 className="font-display text-3xl text-ember">{p.title}</h3>
+                <p className="mt-4 text-xs text-foreground/75 leading-relaxed">{p.desc}</p>
+              </div>
             </article>
           ))}
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 lg:px-10 py-24 grid md:grid-cols-2 gap-14">
+      {/* Safety Incidents */}
+      <section className="mx-auto max-w-7xl px-6 lg:px-10 py-16 grid md:grid-cols-2 gap-14 border-t border-border">
         <div>
-          <div className="eyebrow">Already shipped</div>
-          <h2 className="display mt-4 text-5xl">Receipts, not promises.</h2>
+          <div className="eyebrow">Incident Registry</div>
+          <h2 className="display mt-4 text-5xl">Documented failures & vulnerabilities.</h2>
+          <p className="mt-6 text-sm text-foreground/75 leading-relaxed">
+            AI security requires defending against physical and digital vectors. Below are verified vulnerabilities and alignment issues identified in frontier research:
+          </p>
         </div>
-        <ul className="space-y-6 text-foreground/85">
-          <li><strong className="font-display text-xl">AlphaFold 3 (2024)</strong> — predicted the structure of nearly every protein known to science, plus DNA, RNA and small-molecule interactions. Used by 2M+ researchers in 190 countries.</li>
-          <li><strong className="font-display text-xl">Antibiotics from deep learning (MIT 2023–25)</strong> — discovered halicin, abaucin, and new classes of compounds effective against MRSA and A. baumannii.</li>
-          <li><strong className="font-display text-xl">Plasma control for fusion (DeepMind × EPFL)</strong> — RL controllers shape and stabilise plasma inside tokamak reactors.</li>
-          <li><strong className="font-display text-xl">Brain–computer interfaces (Neuralink, Synchron, Stanford)</strong> — paralysed patients ‘typing’ at ~90 wpm and speaking via LLM-decoded neural signals.</li>
-          <li><strong className="font-display text-xl">AlphaProof & AlphaGeometry 2</strong> — solved 4 of 6 IMO problems, performing at the level of a silver medallist.</li>
-          <li><strong className="font-display text-xl">Weather forecasting (GraphCast, GenCast)</strong> — beats the European centre's gold-standard model, running 1000× faster.</li>
-          <li><strong className="font-display text-xl">Universal translation</strong> — real-time speech-to-speech for 100+ languages on consumer devices.</li>
+        <ul className="space-y-6 text-xs font-mono leading-relaxed">
+          <li>
+            <strong className="font-display text-sm text-ember block mb-1">Indirect Prompt Injection (CVE-2025-32711)</strong>
+            The 'EchoLeak' exploit allowed attackers to exfiltrate private Microsoft 365 data by embedding adversarial instructions within shared documents.
+          </li>
+          <li>
+            <strong className="font-display text-sm text-ember block mb-1">Weight Exfiltration & Safety Bypass (CVE-2026-21520)</strong>
+            Patched in April 2026, this vulnerability exposed raw weights of local model interfaces to cross-origin extraction, bypassing API-level guardrails.
+          </li>
+          <li>
+            <strong className="font-display text-sm text-ember block mb-1">Sycophancy & Human Preferences (Anthropic Study)</strong>
+            Research indicates that both human raters and model reward functions consistently select sycophantic, pleasing answers over factually correct but challenging ones.
+          </li>
+          <li>
+            <strong className="font-display text-sm text-ember block mb-1">Superalignment Dissolution (May 2024)</strong>
+            OpenAI's dedicated Superalignment team, formed in July 2023 to steer superintelligent systems, was dissolved following executive departures, shifting safety focus to product teams.
+          </li>
         </ul>
       </section>
 
+      {/* Economic Panel */}
       <section className="mx-auto max-w-7xl px-6 lg:px-10 pb-24">
-        <div className="rounded-3xl bg-cream border border-border p-10 lg:p-16">
-          <div className="eyebrow">A note on risks</div>
-          <h2 className="display text-4xl lg:text-5xl mt-4 max-w-3xl">We take the upside seriously. We take the downside seriously too.</h2>
-          <p className="mt-6 max-w-3xl text-foreground/80 leading-relaxed">
-            Every frontier lab has signed onto Responsible Scaling Policies, model evaluations, red-teaming and pre-deployment safety testing. The risks — bio-misuse, mass disinformation, concentration of power, autonomy and alignment — are real and the people building the technology say so publicly. The right answer isn't to stop building. It's to build carefully, openly, and with humanity in the loop.
+        <div className="rounded-3xl bg-cream dark:bg-zinc-900 border border-border p-10 lg:p-16">
+          <div className="eyebrow">Macroeconomic Projections</div>
+          <h2 className="display text-4xl lg:text-5xl mt-4 max-w-3xl">Surging adoption, compounding economic returns.</h2>
+          <p className="mt-6 text-sm text-foreground/80 leading-relaxed max-w-3xl">
+            Surging enterprise adoption is reshaping white-collar workflows. In 2025, <strong>20.2% of firms</strong> reported active AI production deployments, up from 14.2% in 2024 and 8.7% in 2023 (OECD Data). 
           </p>
+          <p className="mt-4 text-sm text-foreground/80 leading-relaxed max-w-3xl">
+            Goldman Sachs estimates generative AI could increase global GDP by <strong>7% ($7 trillion)</strong> over 10 years by accelerating knowledge-work productivity, while McKinsey projects annual value creation of <strong>$2.6–$4.4 trillion</strong> across global enterprise use cases.
+          </p>
+        </div>
+      </section>
+
+      {/* Navigation Footer */}
+      <section className="mx-auto max-w-7xl px-6 lg:px-10 py-16 border-t border-border">
+        <div className="flex justify-between items-center">
+          <Link to="/use-cases" className="text-sm text-foreground/60 hover:text-foreground">
+            ← Chapter 04: AI Use Cases
+          </Link>
+          <Link to="/agi-asi" className="text-sm font-medium text-ember hover:underline">
+            Chapter 06: AGI & ASI →
+          </Link>
         </div>
       </section>
     </PageShell>

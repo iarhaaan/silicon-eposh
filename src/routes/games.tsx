@@ -1,12 +1,12 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageShell } from "@/components/site-chrome";
 
 export const Route = createFileRoute("/games")({
   head: () => ({
     meta: [
-      { title: "AI in Games — Silicon Epoch" },
-      { name: "description", content: "GTA 6 (no gen AI, confirmed), NVIDIA ACE, Inworld Unreal SDK, DeepMind Genie 3, World Labs Marble, Decart DOS 2.0 — the road to neural game worlds." },
-      { property: "og:title", content: "AI in Games — Silicon Epoch" },
+      { title: "Reinforcement Learning & Game Simulation — Silicon Epoch" },
+      { name: "description", content: "David Silver's RL milestones from AlphaGo to AlphaStar, and modern simulators like Genie 3 and Factorio agents." },
+      { property: "og:title", content: "Reinforcement Learning & Game Simulation — Silicon Epoch" },
     ],
   }),
   component: Games,
@@ -14,76 +14,77 @@ export const Route = createFileRoute("/games")({
 
 const ACTS = [
   {
-    eyebrow: "Act I · GTA 6, the elephant in the room",
-    title: "‘Zero’ generative AI — and a billion-dollar handcrafted world.",
-    body: "Take-Two CEO Strauss Zelnick confirmed in 2025 that generative AI plays ‘zero part’ in GTA 6's development, calling Rockstar's worlds ‘handcrafted’ down to every building and street. The game launches November 19, 2026 on PS5 and Xbox Series X|S. Take-Two does use AI internally for testing and productivity, but the player-facing world is entirely hand-built.",
+    eyebrow: "Act I · Classic Reinforcement Learning",
+    title: "Mastering perfect and imperfect information systems.",
+    body: "The foundation of modern game intelligence was built on reinforcement learning, progressing from brute-force chess calculations to deep neural networks playing complex, real-time strategy games from self-play.",
     bullets: [
-      "Rockstar's NPCs remain scripted simulation — extended, layered, but not LLM-driven.",
-      "The signal: even the most expensive game ever made bets on craft over generation — for now.",
-      "The counter-signal: every other studio on this page is going the other way.",
+      "Deep Blue (1997): Defeated world champion Garry Kasparov in Chess by calculating 200M positions/sec.",
+      "AlphaGo (2016): Defeated 18-time world champion Lee Sedol 4-1 in Go by combining deep learning with Monte Carlo Tree Search.",
+      "AlphaZero (2017): Mastered Chess, Shogi, and Go entirely from scratch via self-play RL, without using human games.",
+      "AlphaStar (2019): Reached Grandmaster level (top 0.15% of active players) in StarCraft II, mastering imperfect information and real-time planning.",
+      "AlphaDev (2022): Discovered faster sorting algorithms in assembly code, integrated directly into the LLVM libc++ library.",
     ],
   },
   {
-    eyebrow: "Act II · Smarter NPCs",
-    title: "Characters that actually think back.",
-    body: "Inworld AI's Unreal AI Runtime SDK (Oct 2025) — ‘the first unified interactive AI toolkit for game developers’ — consolidates speech, behaviour, intelligence and animation into a single system. NVIDIA ACE in May 2026 shipped DLSS 4.5 for Unreal Engine 5 alongside multilingual AI character capabilities. Multiple AAA studios are integrating.",
+    eyebrow: "Act II · Modern Agent Simulations",
+    title: "Long-horizon planning in open-ended sandboxes.",
+    body: "Today's agents are moving beyond board games to master open-ended construction, resource gathering, and economic trade. These sandboxes serve as pre-deployment testbeds for physical robotics and agentic swarms.",
     bullets: [
-      "NVIDIA ACE: real-time conversational, animated, voice-enabled NPCs running on consumer GPUs.",
-      "Inworld AI: unified runtime for voice + behaviour + memory in Unreal.",
-      "Convai, Charisma.ai, Krafton CPC, Ubisoft NEO NPC: research prototypes for fully generative companions across the industry.",
+      "Factorio Learning Environment: Evaluates long-horizon planning in open-ended logistics loops. Claude 3.7 Sonnet achieved a score of 29.1 in lab-play mode, establishing a new baseline.",
+      "Minecraft Economies: Project Sid (2024) ran simulations of 1,000 autonomous LLM agents in Minecraft, where they self-organized labor, formed a trade economy, and established social structures.",
+      "GTA V Mods (PedGPT): Deploying on-the-fly conversational LLM agents (like Llama 3.1) into GTA V, giving characters unscripted autonomous behavior and memory.",
     ],
   },
   {
-    eyebrow: "Act III · The worlds generate themselves",
-    title: "From engines to world models.",
-    body: "Google DeepMind's Genie 3 (Aug 2025) turns a text prompt into a playable 3D environment you can navigate at 720p / 24 FPS, coherently for minutes. It rolled out to Google AI Ultra subscribers via Project Genie in January 2026. World Labs (Fei-Fei Li) launched Marble in November 2025 — turning text, photos, videos and 3D layouts into navigable interactive scenes. Decart AI raised $300M in 2026 for real-time world models (DOS 2.0).",
+    eyebrow: "Act III · Neural World Simulators",
+    title: "Generative physics replacing traditional game engines.",
+    body: "Rather than hand-building physics grids, developers are utilizing generative world models to simulate continuous, interactive visual environments instantly.",
     bullets: [
-      "Genie 3: 720p, 24 FPS, several minutes of coherent interactive world from a single prompt.",
-      "World Labs Marble: photos / sketches / videos → explorable persistent 3D spaces. Freemium + paid tiers shipping now.",
-      "Decart DOS 2.0: real-time streamed neural game engine, designed to run ‘instantly, continuously, and efficiently’.",
+      "Google Genie 3 (July 2025): Generates playable, interactive 3D worlds at 720p / 24 FPS with a 60-second temporal memory from a single text prompt.",
+      "World Labs Marble (November 2025): Turns text, photos, and videos into persistent, explorable 3D environments.",
+      "Decart DOS 2.0: A streamed, real-time neural game engine that calculates pixels and game states continuously on-the-fly.",
     ],
   },
-  {
-    eyebrow: "Act IV · The endless game",
-    title: "A world that never ends, never repeats, and bends to you.",
-    body: "Combine reasoning models, agentic NPCs, neural world generation, on-the-fly art and music, and persistent memory — and you arrive at something the games industry has chased for forty years: a truly infinite, personal, living world.",
-    bullets: [
-      "Every quest, NPC, building and storyline could be generated on demand.",
-      "The game ‘knows you’ — your playstyle, your past saves, your preferences across titles.",
-      "Multiplayer worlds become shared dreams, not pre-built maps.",
-      "Most researchers expect the first commercial titles built on neural world models within 3–5 years.",
-    ],
-  },
+];
+
+const MILESTONES = [
+  { name: "Deep Blue", year: "1997", achieve: "Defeated Garry Kasparov (Chess)", sig: "First computer to beat world champion in match play." },
+  { name: "AlphaGo", year: "2016", achieve: "Defeated Lee Sedol (Go)", sig: "Combined deep learning + Monte Carlo tree search; Move 37." },
+  { name: "AlphaZero", year: "2017", achieve: "Mastered Chess, Shogi, Go", sig: "Self-play reinforcement learning without using human data." },
+  { name: "AlphaStar", year: "2019", achieve: "Grandmaster (StarCraft II)", sig: "Real-time strategy with imperfect information; top 0.15% EU." },
+  { name: "AlphaDev", year: "2022", achieve: "Discovered sorting algorithms", sig: "RL for code optimization; integrated into LLVM libc++." },
 ];
 
 function Games() {
   return (
     <PageShell>
+      {/* Intro */}
       <section className="mx-auto max-w-7xl px-6 lg:px-10 pt-20 pb-12">
-        <div className="eyebrow">Chapter 06 · Play · Updated June 2026</div>
-        <h1 className="display mt-6 text-[clamp(2.5rem,7vw,7rem)] max-w-6xl">
-          The next great <em className="italic text-ember">game engine</em> is a neural network.
+        <div className="eyebrow">Chapter 07 · Games & Simulation</div>
+        <h1 className="display mt-6 text-[clamp(2.5rem,7vw,7rem)] max-w-6xl leading-[0.95]">
+          Games: Reinforcement <em className="italic text-ember">learning</em> milestones.
         </h1>
         <p className="mt-8 max-w-3xl text-xl text-foreground/75 leading-relaxed">
-          NPCs that improvise. Worlds that generate themselves around you. Stories that adapt to every player. Games are about to feel less like software and more like dreams you can step into.
+          From board games to infinite virtual sandboxes, game environments remain the ultimate proving ground for general intelligence, testing long-horizon planning, spatial reasoning, and real-time execution.
         </p>
       </section>
 
+      {/* Acts grid */}
       <section className="mx-auto max-w-7xl px-6 lg:px-10 pb-24 space-y-px bg-border border border-border rounded-3xl overflow-hidden">
         {ACTS.map((a, i) => (
           <article key={a.eyebrow} className="bg-background p-10 lg:p-14 grid lg:grid-cols-12 gap-10">
             <div className="lg:col-span-4">
               <div className="font-mono text-xs text-foreground/50">{String(i + 1).padStart(2, "0")}</div>
               <div className="eyebrow mt-2">{a.eyebrow}</div>
-              <h2 className="display mt-4 text-4xl lg:text-5xl">{a.title}</h2>
+              <h2 className="display mt-4 text-4xl lg:text-5xl leading-tight">{a.title}</h2>
             </div>
             <div className="lg:col-span-8">
-              <p className="text-lg text-foreground/80 leading-relaxed">{a.body}</p>
+              <p className="text-base text-foreground/80 leading-relaxed">{a.body}</p>
               <ul className="mt-6 space-y-3">
                 {a.bullets.map((b) => (
                   <li key={b} className="flex gap-3">
-                    <span className="text-ember mt-2">▸</span>
-                    <span className="text-foreground/80">{b}</span>
+                    <span className="text-ember mt-1 text-xs">▸</span>
+                    <span className="text-xs text-foreground/85 leading-relaxed">{b}</span>
                   </li>
                 ))}
               </ul>
@@ -92,43 +93,45 @@ function Games() {
         ))}
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 lg:px-10 pb-12">
-        <div className="eyebrow">The gaming AI landscape · June 2026</div>
-        <div className="mt-6 overflow-hidden rounded-2xl border border-border bg-card">
-          <table className="w-full text-left">
-            <thead className="bg-cream">
-              <tr className="text-sm">
-                <th className="p-4 font-medium">System</th>
-                <th className="p-4 font-medium">Status</th>
-                <th className="p-4 font-medium">What it does</th>
-              </tr>
-            </thead>
-            <tbody className="text-sm">
-              {[
-                ["GTA 6 AI NPCs", "No gen AI", "Handcrafted, ships Nov 19, 2026"],
-                ["NVIDIA ACE", "Shipping", "Multilingual conversational NPCs for UE5"],
-                ["Inworld AI Runtime", "Shipping", "Unified NPC AI SDK for Unreal Engine"],
-                ["Google Genie 3", "Available (AI Ultra)", "Text → playable interactive worlds, 720p / 24 FPS"],
-                ["Decart DOS 2.0", "Early access · $300M raised", "Real-time continuous world model"],
-                ["World Labs Marble", "Launched (freemium)", "Text / photo / video → navigable 3D worlds"],
-              ].map((row) => (
-                <tr key={row[0]} className="border-t border-border">
-                  <td className="p-4 font-medium">{row[0]}</td>
-                  <td className="p-4 text-foreground/70">{row[1]}</td>
-                  <td className="p-4 text-foreground/70">{row[2]}</td>
+      {/* Table of classic milestones */}
+      <section className="mx-auto max-w-7xl px-6 lg:px-10 py-12">
+        <div className="eyebrow">Milestone Registry</div>
+        <h2 className="display text-4xl lg:text-5xl mt-4 mb-8">David Silver's Reinforcement Learning Lineage</h2>
+        <div className="border border-border rounded-3xl overflow-hidden bg-background">
+          <div className="overflow-x-auto">
+            <table className="w-full text-left border-collapse text-sm">
+              <thead>
+                <tr className="border-b border-border bg-cream/40 dark:bg-zinc-900/40 text-xs font-mono uppercase text-muted-foreground">
+                  <th className="p-4 lg:p-6">System</th>
+                  <th className="p-4 lg:p-6">Year</th>
+                  <th className="p-4 lg:p-6">Milestone Achievement</th>
+                  <th className="p-4 lg:p-6">Significance</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody className="divide-y divide-border/60">
+                {MILESTONES.map((m) => (
+                  <tr key={m.name} className="hover:bg-cream/20 dark:hover:bg-zinc-900/20 text-xs">
+                    <td className="p-4 lg:p-6 font-display font-medium text-sm text-ember">{m.name}</td>
+                    <td className="p-4 lg:p-6 font-mono">{m.year}</td>
+                    <td className="p-4 lg:p-6 text-foreground/80">{m.achieve}</td>
+                    <td className="p-4 lg:p-6 text-foreground/70">{m.sig}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 lg:px-10 pb-24">
-        <div className="rounded-3xl bg-ink text-paper p-14 grain">
-          <div className="grain-overlay" />
-          <div className="eyebrow text-paper/60">The endgame</div>
-          <h2 className="display text-4xl lg:text-6xl mt-3 max-w-4xl">A world entirely generated in real time, with endless possibilities — yes, it is coming. The only question is when.</h2>
-          <p className="mt-6 max-w-3xl text-paper/80 leading-relaxed">Most researchers in the field believe playable, persistent, AI-generated worlds will arrive in commercial form within the next 3–7 years. The Holodeck is no longer a metaphor.</p>
+      {/* Navigation Footer */}
+      <section className="mx-auto max-w-7xl px-6 lg:px-10 py-16 border-t border-border">
+        <div className="flex justify-between items-center">
+          <Link to="/agi-asi" className="text-sm text-foreground/60 hover:text-foreground">
+            ← Chapter 06: AGI & ASI
+          </Link>
+          <Link to="/next-decade" className="text-sm font-medium text-ember hover:underline">
+            Chapter 08: Next Decade →
+          </Link>
         </div>
       </section>
     </PageShell>

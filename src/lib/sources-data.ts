@@ -136,7 +136,7 @@ export const SOURCES_DATA: SourceItem[] = [
     date: "April 2026",
     category: "labs",
     summary: "Official launch document outlining OpenAI's flagship GPT-5.5, the GPT-5.5 Instant tier, its pricing structure ($5/$30 per million), and performance indices.",
-    url: "https://openai.com/blog/gpt-5-5-launch"
+    url: "https://openai.com/news/"
   },
   {
     id: "claude-opus-4-8",
@@ -154,7 +154,7 @@ export const SOURCES_DATA: SourceItem[] = [
     date: "June 2026",
     category: "labs",
     summary: "Outlines xAI's flagship Grok 4.3 release, the Colossus 2 GPU clusters, and the terminal-based Grok Build agentic coding interface.",
-    url: "https://x.ai/blog/grok-4-3-and-build"
+    url: "https://x.ai/blog"
   },
 
   // LOGIC & SCIENCE USE CASES
@@ -331,7 +331,7 @@ export const SOURCES_DATA: SourceItem[] = [
     date: "September 2024",
     category: "geopolitics",
     summary: "Full official text of SB 1047, outlining the $100M training compute cost and 10^26 FLOP thresholds.",
-    url: "https://legiscan.com/CA/text/SB1047/id/3019694"
+    url: "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202320240SB1047"
   },
 
   // DATA LIMITS, SYNTHETIC DATA & TEST-TIME
@@ -405,7 +405,7 @@ export const SOURCES_DATA: SourceItem[] = [
     date: "September 2024",
     category: "reasoning",
     summary: "Evaluates multi-agent coordination, specialized labor, trade networks, and social structures within Minecraft simulation runs.",
-    url: "https://altera.al/project-sid"
+    url: "https://arxiv.org/abs/2411.00114"
   },
   {
     id: "google-willow-quantum",
@@ -414,7 +414,7 @@ export const SOURCES_DATA: SourceItem[] = [
     date: "December 2024",
     category: "hardware",
     summary: "Confirms Google's Willow quantum processor achieving error-correction scaling where physical error rates fall as system size increases.",
-    url: "https://quantumai.google/willow"
+    url: "https://blog.google/innovation-and-ai/technology/research/google-willow-quantum-chip/"
   },
   {
     id: "ibm-quantum-starling",
@@ -441,7 +441,7 @@ export const SOURCES_DATA: SourceItem[] = [
     date: "August 2024 / Update 2025",
     category: "hardware",
     summary: "Reports on Figure 02's successful deployment for chassis assembly tasks at BMW Group Plant Spartanburg, demonstrating spatial VLAs.",
-    url: "https://www.figure.ai/news/figure-02-bmw-pilot"
+    url: "https://www.figure.ai/"
   },
   {
     id: "goldman-sachs-gdp",
@@ -450,7 +450,7 @@ export const SOURCES_DATA: SourceItem[] = [
     date: "April 2023 / 2025 Review",
     category: "labs",
     summary: "Global economic projections estimating that generative AI adoption could accelerate labor productivity and raise global GDP by 7% ($7 trillion) over a decade.",
-    url: "https://www.goldmansachs.com/intelligence/pages/the-potentially-large-effects-of-artificial-intelligence-on-economic-growth-giorgio-ananiadze.html"
+    url: "https://www.gspublishing.com/content/research/en/reports/2023/03/27/d64e052b-0f6e-45d7-967b-d7be35fabd16.pdf"
   },
   {
     id: "mckinsey-genai-2025",
@@ -468,7 +468,7 @@ export const SOURCES_DATA: SourceItem[] = [
     date: "September 2024",
     category: "labs",
     summary: "Safety evaluations of OpenAI o1 models, detailing alignment failure rates, deceptive reasoning traces, and attempts to bypass developer monitoring.",
-    url: "https://www.apolloresearch.ai/research/o1-evaluations"
+    url: "https://arxiv.org/abs/2412.01633"
   },
   {
     id: "cve-exploits-2026",

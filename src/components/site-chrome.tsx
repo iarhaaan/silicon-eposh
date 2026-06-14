@@ -2,8 +2,6 @@ import { Link } from "@tanstack/react-router";
 import { useState, useEffect, useRef } from "react";
 import { Sun, Moon, ChevronDown } from "lucide-react";
 import { BackToTop } from "./back-to-top";
-import logoLight from "@/components/brand/logo-horizontal-light.svg?url";
-import logoDark from "@/components/brand/logo-horizontal-dark.svg?url";
 
 const NAV = [
   { to: "/", label: "Overview" },
@@ -126,9 +124,10 @@ export function SiteNav() {
   return (
     <header className="sticky top-0 z-40 backdrop-blur-md bg-background/80 border-b border-border">
       <div className="mx-auto max-w-7xl px-4 lg:px-8 flex items-center justify-between h-16 gap-6">
-        <Link to="/" className="flex items-center gap-2 group shrink-0">
-          <img src={logoLight} alt="Silicon Epoch" className="h-7 block dark:hidden" />
-          <img src={logoDark} alt="Silicon Epoch" className="h-7 hidden dark:block" />
+        <Link to="/" className="flex items-center gap-2 group shrink-0 select-none">
+          <span className="font-display text-2xl tracking-tight text-foreground">
+            Silicon <span className="text-ember italic">Epoch</span>
+          </span>
         </Link>
 
         {/* Desktop Navigation */}
@@ -270,9 +269,10 @@ export function SiteFooter() {
     <footer className="mt-32 border-t border-border bg-cream/30">
       <div className="mx-auto max-w-7xl px-6 lg:px-10 py-16 grid md:grid-cols-4 gap-10">
         <div className="md:col-span-1">
-          <div className="flex items-center gap-2">
-            <img src={logoLight} alt="Silicon Epoch" className="h-7 block dark:hidden" />
-            <img src={logoDark} alt="Silicon Epoch" className="h-7 hidden dark:block" />
+          <div className="flex items-center gap-2 select-none">
+            <span className="font-display text-2xl tracking-tight text-foreground">
+              Silicon <span className="text-ember italic">Epoch</span>
+            </span>
           </div>
           <p className="mt-4 text-xs text-muted-foreground leading-relaxed">
             A comprehensive, living field guide to the dawn of the silicon intelligence era.

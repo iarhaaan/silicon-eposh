@@ -17,11 +17,11 @@ export const Route = createFileRoute("/data-wall")({
         property: "og:description",
         content: "Synthetic data, RLAIF, test-time scaling — the post-data-wall playbook.",
       },
-      { property: "og:url", content: "https://siliconeposh.vercel.app/data-wall" },
-      { property: "og:image", content: "https://siliconeposh.vercel.app/og-image-dark.png" },
-      { name: "twitter:image", content: "https://siliconeposh.vercel.app/og-image-dark.png" },
+      { property: "og:url", content: "https://siliconepoch.vercel.app/data-wall" },
+      { property: "og:image", content: "https://siliconepoch.vercel.app/og-image-dark.png" },
+      { name: "twitter:image", content: "https://siliconepoch.vercel.app/og-image-dark.png" },
     ],
-    links: [{ rel: "canonical", href: "https://siliconeposh.vercel.app/data-wall" }],
+    links: [{ rel: "canonical", href: "https://siliconepoch.vercel.app/data-wall" }],
 
     scripts: [
       {
@@ -32,23 +32,23 @@ export const Route = createFileRoute("/data-wall")({
           headline: "The Data Wall — Synthetic Data and Scaling Limits",
           description:
             "Pre-training data is finite. How the frontier responds: synthetic data, multimodal corpora, test-time scaling, RLAIF, and the move from data scale to compute scale.",
-          image: "https://siliconeposh.vercel.app/og-image-dark.png",
+          image: "https://siliconepoch.vercel.app/og-image-dark.png",
           datePublished: "2026-06-01",
           dateModified: "2026-06-14",
           author: {
             "@type": "Organization",
             name: "Silicon Epoch",
-            url: "https://siliconeposh.vercel.app",
+            url: "https://siliconepoch.vercel.app",
           },
           publisher: {
             "@type": "Organization",
             name: "Silicon Epoch",
             logo: {
               "@type": "ImageObject",
-              url: "https://siliconeposh.vercel.app/apple-touch-icon.png",
+              url: "https://siliconepoch.vercel.app/apple-touch-icon.png",
             },
           },
-          mainEntityOfPage: "https://siliconeposh.vercel.app/data-wall",
+          mainEntityOfPage: "https://siliconepoch.vercel.app/data-wall",
         }),
       },
       {
@@ -61,13 +61,13 @@ export const Route = createFileRoute("/data-wall")({
               "@type": "ListItem",
               position: 1,
               name: "Home",
-              item: "https://siliconeposh.vercel.app/",
+              item: "https://siliconepoch.vercel.app/",
             },
             {
               "@type": "ListItem",
               position: 2,
               name: "The Data Wall",
-              item: "https://siliconeposh.vercel.app/data-wall",
+              item: "https://siliconepoch.vercel.app/data-wall",
             },
           ],
         }),

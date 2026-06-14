@@ -34,10 +34,10 @@ export const Route = createFileRoute("/")({
         content:
           "Every frontier lab, the chip wars, power grids, reasoning models, the data wall, and the road to superintelligence.",
       },
-      { property: "og:url", content: "https://siliconeposh.vercel.app/" },
-      { property: "og:image", content: "https://siliconeposh.vercel.app/og-image-dark.png" },
+      { property: "og:url", content: "https://siliconepoch.vercel.app/" },
+      { property: "og:image", content: "https://siliconepoch.vercel.app/og-image-dark.png" },
       { property: "og:type", content: "website" },
-      { name: "twitter:image", content: "https://siliconeposh.vercel.app/og-image-dark.png" },
+      { name: "twitter:image", content: "https://siliconepoch.vercel.app/og-image-dark.png" },
       { name: "twitter:title", content: "Silicon Epoch — A Field Guide to the AI Frontier" },
       {
         name: "twitter:description",
@@ -45,7 +45,7 @@ export const Route = createFileRoute("/")({
           "Every frontier lab, the chip wars, power grids, reasoning models, the data wall, and the road to superintelligence.",
       },
     ],
-    links: [{ rel: "canonical", href: "https://siliconeposh.vercel.app/" }],
+    links: [{ rel: "canonical", href: "https://siliconepoch.vercel.app/" }],
     scripts: [
       {
         type: "application/ld+json",

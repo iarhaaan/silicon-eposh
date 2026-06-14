@@ -17,11 +17,11 @@ export const Route = createFileRoute("/games")({
         property: "og:description",
         content: "How RL and world models are rewriting games and generative physics.",
       },
-      { property: "og:url", content: "https://siliconeposh.vercel.app/games" },
-      { property: "og:image", content: "https://siliconeposh.vercel.app/og-image-dark.png" },
-      { name: "twitter:image", content: "https://siliconeposh.vercel.app/og-image-dark.png" },
+      { property: "og:url", content: "https://siliconepoch.vercel.app/games" },
+      { property: "og:image", content: "https://siliconepoch.vercel.app/og-image-dark.png" },
+      { name: "twitter:image", content: "https://siliconepoch.vercel.app/og-image-dark.png" },
     ],
-    links: [{ rel: "canonical", href: "https://siliconeposh.vercel.app/games" }],
+    links: [{ rel: "canonical", href: "https://siliconepoch.vercel.app/games" }],
 
     scripts: [
       {
@@ -32,23 +32,23 @@ export const Route = createFileRoute("/games")({
           headline: "Reinforcement Learning in Games — AlphaZero to Genie",
           description:
             "From perfect-information chess to open-ended Factorio — how reinforcement learning, world models, and generative physics are rewriting both games and the engines beneath them.",
-          image: "https://siliconeposh.vercel.app/og-image-dark.png",
+          image: "https://siliconepoch.vercel.app/og-image-dark.png",
           datePublished: "2026-06-01",
           dateModified: "2026-06-14",
           author: {
             "@type": "Organization",
             name: "Silicon Epoch",
-            url: "https://siliconeposh.vercel.app",
+            url: "https://siliconepoch.vercel.app",
           },
           publisher: {
             "@type": "Organization",
             name: "Silicon Epoch",
             logo: {
               "@type": "ImageObject",
-              url: "https://siliconeposh.vercel.app/apple-touch-icon.png",
+              url: "https://siliconepoch.vercel.app/apple-touch-icon.png",
             },
           },
-          mainEntityOfPage: "https://siliconeposh.vercel.app/games",
+          mainEntityOfPage: "https://siliconepoch.vercel.app/games",
         }),
       },
       {
@@ -61,13 +61,13 @@ export const Route = createFileRoute("/games")({
               "@type": "ListItem",
               position: 1,
               name: "Home",
-              item: "https://siliconeposh.vercel.app/",
+              item: "https://siliconepoch.vercel.app/",
             },
             {
               "@type": "ListItem",
               position: 2,
               name: "Reinforcement Learning in Games",
-              item: "https://siliconeposh.vercel.app/games",
+              item: "https://siliconepoch.vercel.app/games",
             },
           ],
         }),

@@ -17,11 +17,11 @@ export const Route = createFileRoute("/humanity")({
         property: "og:description",
         content: "Alignment techniques and labor-market shifts in the Silicon Epoch.",
       },
-      { property: "og:url", content: "https://siliconeposh.vercel.app/humanity" },
-      { property: "og:image", content: "https://siliconeposh.vercel.app/og-image-dark.png" },
-      { name: "twitter:image", content: "https://siliconeposh.vercel.app/og-image-dark.png" },
+      { property: "og:url", content: "https://siliconepoch.vercel.app/humanity" },
+      { property: "og:image", content: "https://siliconepoch.vercel.app/og-image-dark.png" },
+      { name: "twitter:image", content: "https://siliconepoch.vercel.app/og-image-dark.png" },
     ],
-    links: [{ rel: "canonical", href: "https://siliconeposh.vercel.app/humanity" }],
+    links: [{ rel: "canonical", href: "https://siliconepoch.vercel.app/humanity" }],
 
     scripts: [
       {
@@ -32,23 +32,23 @@ export const Route = createFileRoute("/humanity")({
           headline: "AI Safety, Alignment, and the Future of Work",
           description:
             "Post-training pipelines, RLHF, RLAIF, constitutional AI, and the labor-market shifts already underway — the human side of the Silicon Epoch.",
-          image: "https://siliconeposh.vercel.app/og-image-dark.png",
+          image: "https://siliconepoch.vercel.app/og-image-dark.png",
           datePublished: "2026-06-01",
           dateModified: "2026-06-14",
           author: {
             "@type": "Organization",
             name: "Silicon Epoch",
-            url: "https://siliconeposh.vercel.app",
+            url: "https://siliconepoch.vercel.app",
           },
           publisher: {
             "@type": "Organization",
             name: "Silicon Epoch",
             logo: {
               "@type": "ImageObject",
-              url: "https://siliconeposh.vercel.app/apple-touch-icon.png",
+              url: "https://siliconepoch.vercel.app/apple-touch-icon.png",
             },
           },
-          mainEntityOfPage: "https://siliconeposh.vercel.app/humanity",
+          mainEntityOfPage: "https://siliconepoch.vercel.app/humanity",
         }),
       },
       {
@@ -61,13 +61,13 @@ export const Route = createFileRoute("/humanity")({
               "@type": "ListItem",
               position: 1,
               name: "Home",
-              item: "https://siliconeposh.vercel.app/",
+              item: "https://siliconepoch.vercel.app/",
             },
             {
               "@type": "ListItem",
               position: 2,
               name: "AI Safety, Alignment, and the Future of Work",
-              item: "https://siliconeposh.vercel.app/humanity",
+              item: "https://siliconepoch.vercel.app/humanity",
             },
           ],
         }),

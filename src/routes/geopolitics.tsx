@@ -17,11 +17,11 @@ export const Route = createFileRoute("/geopolitics")({
         property: "og:description",
         content: "TSMC 2nm, ASML EUV, export controls — the geopolitics of frontier AI.",
       },
-      { property: "og:url", content: "https://siliconeposh.vercel.app/geopolitics" },
-      { property: "og:image", content: "https://siliconeposh.vercel.app/og-image-dark.png" },
-      { name: "twitter:image", content: "https://siliconeposh.vercel.app/og-image-dark.png" },
+      { property: "og:url", content: "https://siliconepoch.vercel.app/geopolitics" },
+      { property: "og:image", content: "https://siliconepoch.vercel.app/og-image-dark.png" },
+      { name: "twitter:image", content: "https://siliconepoch.vercel.app/og-image-dark.png" },
     ],
-    links: [{ rel: "canonical", href: "https://siliconeposh.vercel.app/geopolitics" }],
+    links: [{ rel: "canonical", href: "https://siliconepoch.vercel.app/geopolitics" }],
 
     scripts: [
       {
@@ -32,23 +32,23 @@ export const Route = createFileRoute("/geopolitics")({
           headline: "AI Chip Wars — TSMC, ASML, and the Geopolitics of Compute",
           description:
             "Why TSMC's 2nm node, ASML's EUV monopoly, and US export controls now decide AI capability faster than any model release — the geopolitics of frontier compute.",
-          image: "https://siliconeposh.vercel.app/og-image-dark.png",
+          image: "https://siliconepoch.vercel.app/og-image-dark.png",
           datePublished: "2026-06-01",
           dateModified: "2026-06-14",
           author: {
             "@type": "Organization",
             name: "Silicon Epoch",
-            url: "https://siliconeposh.vercel.app",
+            url: "https://siliconepoch.vercel.app",
           },
           publisher: {
             "@type": "Organization",
             name: "Silicon Epoch",
             logo: {
               "@type": "ImageObject",
-              url: "https://siliconeposh.vercel.app/apple-touch-icon.png",
+              url: "https://siliconepoch.vercel.app/apple-touch-icon.png",
             },
           },
-          mainEntityOfPage: "https://siliconeposh.vercel.app/geopolitics",
+          mainEntityOfPage: "https://siliconepoch.vercel.app/geopolitics",
         }),
       },
       {
@@ -61,13 +61,13 @@ export const Route = createFileRoute("/geopolitics")({
               "@type": "ListItem",
               position: 1,
               name: "Home",
-              item: "https://siliconeposh.vercel.app/",
+              item: "https://siliconepoch.vercel.app/",
             },
             {
               "@type": "ListItem",
               position: 2,
               name: "AI Chip Wars",
-              item: "https://siliconeposh.vercel.app/geopolitics",
+              item: "https://siliconepoch.vercel.app/geopolitics",
             },
           ],
         }),

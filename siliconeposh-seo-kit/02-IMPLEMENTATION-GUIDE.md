@@ -35,7 +35,7 @@ For each chapter route (`compute`, `how-ai-works`, `companies`, `geopolitics`, `
 ```tsx
 head: () => ({
   meta: [ /* ... from snippet ... */ ],
-  links: [{ rel: "canonical", href: "https://siliconeposh.vercel.app/<slug>" }],
+  links: [{ rel: "canonical", href: "https://siliconepoch.vercel.app/<slug>" }],
   scripts: [
     {
       type: "application/ld+json",
@@ -44,16 +44,16 @@ head: () => ({
         "@type": "Article",
         headline: "<page title>",
         description: "<page description>",
-        image: "https://siliconeposh.vercel.app/og-image-dark.png",
+        image: "https://siliconepoch.vercel.app/og-image-dark.png",
         datePublished: "2026-06-01",
         dateModified: "2026-06-14",
         author: { "@type": "Organization", name: "Silicon Epoch" },
         publisher: {
           "@type": "Organization",
           name: "Silicon Epoch",
-          logo: { "@type": "ImageObject", url: "https://siliconeposh.vercel.app/apple-touch-icon.png" }
+          logo: { "@type": "ImageObject", url: "https://siliconepoch.vercel.app/apple-touch-icon.png" }
         },
-        mainEntityOfPage: "https://siliconeposh.vercel.app/<slug>"
+        mainEntityOfPage: "https://siliconepoch.vercel.app/<slug>"
       }),
     },
     {
@@ -62,8 +62,8 @@ head: () => ({
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
         itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Home", item: "https://siliconeposh.vercel.app/" },
-          { "@type": "ListItem", position: 2, name: "<page name>", item: "https://siliconeposh.vercel.app/<slug>" }
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://siliconepoch.vercel.app/" },
+          { "@type": "ListItem", position: 2, name: "<page name>", item: "https://siliconepoch.vercel.app/<slug>" }
         ]
       }),
     },
@@ -157,7 +157,7 @@ import logoDark from "@/components/brand/logo-horizontal-dark.svg?url";
 | Facebook Sharing Debugger | https://developers.facebook.com/tools/debug/ | Click "Scrape again" — new image + title appears                     |
 | X Card validator          | https://cards-dev.twitter.com/validator      | summary_large_image shows                                            |
 | LinkedIn Post Inspector   | https://www.linkedin.com/post-inspector/     | Refresh preview                                                      |
-| Google Search Console     | (sign in)                                    | Submit `https://siliconeposh.vercel.app/sitemap.xml`                 |
+| Google Search Console     | (sign in)                                    | Submit `https://siliconepoch.vercel.app/sitemap.xml`                 |
 | Bing Webmaster Tools      | (sign in)                                    | Submit sitemap                                                       |
 | GTmetrix / PageSpeed      | https://pagespeed.web.dev/                   | Target ≥ 90 mobile                                                   |
 

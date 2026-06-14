@@ -3,7 +3,7 @@
 You are an AI IDE assistant. This kit contains a full SEO audit, ready-to-apply code
 fixes, and a brand asset pack for the **Silicon Epoch** project
 (`https://github.com/iarhaaan/siliconeposh`, deployed at
-`https://siliconeposh.vercel.app/`).
+`https://siliconepoch.vercel.app/`).
 
 The project is a TanStack Start v1 app (React 19, TypeScript, Tailwind v4) with
 file-based routing under `src/routes/`. Apply the changes in the order below.
@@ -95,7 +95,7 @@ So `og-image-1200x630-dark.png` is the **Open Graph share image**, **1200×630**
 ## 5. Do NOT
 
 - Do not bake a custom domain anywhere. All canonical/og:url values use
-  `https://siliconeposh.vercel.app/` until a domain is purchased.
+  `https://siliconepoch.vercel.app/` until a domain is purchased.
 - Do not duplicate `<link rel="canonical">` in `__root.tsx` — it belongs on
   leaf routes only (TanStack Router concatenates link tags).
 - Do not put `og:image` in `__root.tsx` if you want per-page images to win —

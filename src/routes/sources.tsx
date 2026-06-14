@@ -17,11 +17,11 @@ export const Route = createFileRoute("/sources")({
         property: "og:description",
         content: "Every citation behind every claim in Silicon Epoch.",
       },
-      { property: "og:url", content: "https://siliconeposh.vercel.app/sources" },
-      { property: "og:image", content: "https://siliconeposh.vercel.app/og-image-dark.png" },
-      { name: "twitter:image", content: "https://siliconeposh.vercel.app/og-image-dark.png" },
+      { property: "og:url", content: "https://siliconepoch.vercel.app/sources" },
+      { property: "og:image", content: "https://siliconepoch.vercel.app/og-image-dark.png" },
+      { name: "twitter:image", content: "https://siliconepoch.vercel.app/og-image-dark.png" },
     ],
-    links: [{ rel: "canonical", href: "https://siliconeposh.vercel.app/sources" }],
+    links: [{ rel: "canonical", href: "https://siliconepoch.vercel.app/sources" }],
 
     scripts: [
       {
@@ -32,23 +32,23 @@ export const Route = createFileRoute("/sources")({
           headline: "Sources & Bibliography — Silicon Epoch",
           description:
             "Every citation in Silicon Epoch — primary developer releases, research papers, benchmarks, and policy documents that ground every claim in this guide.",
-          image: "https://siliconeposh.vercel.app/og-image-dark.png",
+          image: "https://siliconepoch.vercel.app/og-image-dark.png",
           datePublished: "2026-06-01",
           dateModified: "2026-06-14",
           author: {
             "@type": "Organization",
             name: "Silicon Epoch",
-            url: "https://siliconeposh.vercel.app",
+            url: "https://siliconepoch.vercel.app",
           },
           publisher: {
             "@type": "Organization",
             name: "Silicon Epoch",
             logo: {
               "@type": "ImageObject",
-              url: "https://siliconeposh.vercel.app/apple-touch-icon.png",
+              url: "https://siliconepoch.vercel.app/apple-touch-icon.png",
             },
           },
-          mainEntityOfPage: "https://siliconeposh.vercel.app/sources",
+          mainEntityOfPage: "https://siliconepoch.vercel.app/sources",
         }),
       },
       {
@@ -61,13 +61,13 @@ export const Route = createFileRoute("/sources")({
               "@type": "ListItem",
               position: 1,
               name: "Home",
-              item: "https://siliconeposh.vercel.app/",
+              item: "https://siliconepoch.vercel.app/",
             },
             {
               "@type": "ListItem",
               position: 2,
               name: "Sources & Bibliography",
-              item: "https://siliconeposh.vercel.app/sources",
+              item: "https://siliconepoch.vercel.app/sources",
             },
           ],
         }),

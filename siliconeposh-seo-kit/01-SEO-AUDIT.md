@@ -1,7 +1,7 @@
 # 01 — Silicon Epoch · Comprehensive SEO Audit
 
 **Audit date:** June 14, 2026
-**Site:** https://siliconeposh.vercel.app/
+**Site:** https://siliconepoch.vercel.app/
 **Repo:** https://github.com/iarhaaan/siliconeposh
 **Stack:** TanStack Start v1 · React 19 · TypeScript · Tailwind v4 · Vercel
 **Theme:** Dual (light/dark) · serif display (Instrument Serif) + Inter Tight + JetBrains Mono
@@ -204,7 +204,7 @@ GitHub Search and Google both crawl public repos. Optimizing the repo gives Sili
 
 - **Description** (max 350 chars):
   > A comprehensive, living field guide to the AI revolution — every frontier lab, the chip wars, power grids, reasoning models, the data wall, AGI timelines, and the road to superintelligence. React 19 + TanStack Start + TypeScript. Updated June 2026.
-- **Website**: `https://siliconeposh.vercel.app`
+- **Website**: `https://siliconepoch.vercel.app`
 - **Topics** (paste all 20 — they are GitHub's #1 discoverability signal):
   ```
   ai, artificial-intelligence, llm, frontier-models, gpt-5, claude, gemini,
@@ -255,7 +255,7 @@ When all six are present, GitHub gives the repo a higher Health Score, which fee
 | **Product Hunt**                                   | Launch as "AI field guide"                                                               | One day on PH = OG traffic + backlinks from review sites.                                    |
 | **Twitter/X**                                      | Pin a thread quoting the timeline                                                        | Direct traffic; the og:image is indexed.                                                     |
 | **Hugging Face**                                   | Add a Space or model card referencing this                                               | Inbound from HF, which Google trusts highly.                                                 |
-| **Wikipedia**                                      | Add `siliconeposh.vercel.app` as an external reference on an existing AI history article | Among the most powerful backlinks anywhere. Use sparingly and only where genuinely relevant. |
+| **Wikipedia**                                      | Add `siliconepoch.vercel.app` as an external reference on an existing AI history article | Among the most powerful backlinks anywhere. Use sparingly and only where genuinely relevant. |
 
 ---
 

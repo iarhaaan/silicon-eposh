@@ -18,11 +18,11 @@ export const Route = createFileRoute("/agi-asi")({
         content:
           "Frontier-lab roadmaps, bottlenecks, and the credible path from today's models to AGI.",
       },
-      { property: "og:url", content: "https://siliconeposh.vercel.app/agi-asi" },
-      { property: "og:image", content: "https://siliconeposh.vercel.app/og-image-dark.png" },
-      { name: "twitter:image", content: "https://siliconeposh.vercel.app/og-image-dark.png" },
+      { property: "og:url", content: "https://siliconepoch.vercel.app/agi-asi" },
+      { property: "og:image", content: "https://siliconepoch.vercel.app/og-image-dark.png" },
+      { name: "twitter:image", content: "https://siliconepoch.vercel.app/og-image-dark.png" },
     ],
-    links: [{ rel: "canonical", href: "https://siliconeposh.vercel.app/agi-asi" }],
+    links: [{ rel: "canonical", href: "https://siliconepoch.vercel.app/agi-asi" }],
 
     scripts: [
       {
@@ -33,23 +33,23 @@ export const Route = createFileRoute("/agi-asi")({
           headline: "AGI & ASI Timelines — How Close Are We? (2026)",
           description:
             "Frontier-lab roadmaps for AGI and superintelligence: capabilities reached, capabilities remaining, the bottlenecks of compute, energy, and post-training data.",
-          image: "https://siliconeposh.vercel.app/og-image-dark.png",
+          image: "https://siliconepoch.vercel.app/og-image-dark.png",
           datePublished: "2026-06-01",
           dateModified: "2026-06-14",
           author: {
             "@type": "Organization",
             name: "Silicon Epoch",
-            url: "https://siliconeposh.vercel.app",
+            url: "https://siliconepoch.vercel.app",
           },
           publisher: {
             "@type": "Organization",
             name: "Silicon Epoch",
             logo: {
               "@type": "ImageObject",
-              url: "https://siliconeposh.vercel.app/apple-touch-icon.png",
+              url: "https://siliconepoch.vercel.app/apple-touch-icon.png",
             },
           },
-          mainEntityOfPage: "https://siliconeposh.vercel.app/agi-asi",
+          mainEntityOfPage: "https://siliconepoch.vercel.app/agi-asi",
         }),
       },
       {
@@ -62,13 +62,13 @@ export const Route = createFileRoute("/agi-asi")({
               "@type": "ListItem",
               position: 1,
               name: "Home",
-              item: "https://siliconeposh.vercel.app/",
+              item: "https://siliconepoch.vercel.app/",
             },
             {
               "@type": "ListItem",
               position: 2,
               name: "AGI & ASI Timelines",
-              item: "https://siliconeposh.vercel.app/agi-asi",
+              item: "https://siliconepoch.vercel.app/agi-asi",
             },
           ],
         }),

@@ -17,11 +17,11 @@ export const Route = createFileRoute("/use-cases")({
         property: "og:description",
         content: "Production AI use cases driving 2026 revenue — coding, science, ops.",
       },
-      { property: "og:url", content: "https://siliconeposh.vercel.app/use-cases" },
-      { property: "og:image", content: "https://siliconeposh.vercel.app/og-image-dark.png" },
-      { name: "twitter:image", content: "https://siliconeposh.vercel.app/og-image-dark.png" },
+      { property: "og:url", content: "https://siliconepoch.vercel.app/use-cases" },
+      { property: "og:image", content: "https://siliconepoch.vercel.app/og-image-dark.png" },
+      { name: "twitter:image", content: "https://siliconepoch.vercel.app/og-image-dark.png" },
     ],
-    links: [{ rel: "canonical", href: "https://siliconeposh.vercel.app/use-cases" }],
+    links: [{ rel: "canonical", href: "https://siliconepoch.vercel.app/use-cases" }],
 
     scripts: [
       {
@@ -32,23 +32,23 @@ export const Route = createFileRoute("/use-cases")({
           headline: "What AI Is Actually Used For — Production Use Cases 2026",
           description:
             "Coding agents shipping commits, olympiad-level math reasoning, drug discovery, contract review, and the use cases driving the $2.5B+ ARR of frontier products.",
-          image: "https://siliconeposh.vercel.app/og-image-dark.png",
+          image: "https://siliconepoch.vercel.app/og-image-dark.png",
           datePublished: "2026-06-01",
           dateModified: "2026-06-14",
           author: {
             "@type": "Organization",
             name: "Silicon Epoch",
-            url: "https://siliconeposh.vercel.app",
+            url: "https://siliconepoch.vercel.app",
           },
           publisher: {
             "@type": "Organization",
             name: "Silicon Epoch",
             logo: {
               "@type": "ImageObject",
-              url: "https://siliconeposh.vercel.app/apple-touch-icon.png",
+              url: "https://siliconepoch.vercel.app/apple-touch-icon.png",
             },
           },
-          mainEntityOfPage: "https://siliconeposh.vercel.app/use-cases",
+          mainEntityOfPage: "https://siliconepoch.vercel.app/use-cases",
         }),
       },
       {
@@ -61,13 +61,13 @@ export const Route = createFileRoute("/use-cases")({
               "@type": "ListItem",
               position: 1,
               name: "Home",
-              item: "https://siliconeposh.vercel.app/",
+              item: "https://siliconepoch.vercel.app/",
             },
             {
               "@type": "ListItem",
               position: 2,
               name: "What AI Is Actually Used For",
-              item: "https://siliconeposh.vercel.app/use-cases",
+              item: "https://siliconepoch.vercel.app/use-cases",
             },
           ],
         }),

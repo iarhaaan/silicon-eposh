@@ -32,7 +32,7 @@ Baseline: `iarhaaan/siliconeposh` @ main (June 14, 2026)
 
 - Repo description rewritten.
 - 20 topics added.
-- Website URL set to https://siliconeposh.vercel.app.
+- Website URL set to https://siliconepoch.vercel.app.
 - Social preview image uploaded.
 - Discussions enabled.
 - v1.0.0-june-2026 release tagged.

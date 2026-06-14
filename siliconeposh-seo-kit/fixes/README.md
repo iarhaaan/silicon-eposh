@@ -1,20 +1,20 @@
 <div align="center">
 
-<img src="https://siliconeposh.vercel.app/og-image-dark.png" alt="Silicon Epoch — A Field Guide to the AI Frontier" width="100%" />
+<img src="https://siliconepoch.vercel.app/og-image-dark.png" alt="Silicon Epoch — A Field Guide to the AI Frontier" width="100%" />
 
 # Silicon Epoch
 
 ### A comprehensive, living field guide to the AI revolution — every frontier lab, the chip wars, power grids, reasoning models, the data wall, AGI timelines, and the road to superintelligence.
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-siliconeposh.vercel.app-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://siliconeposh.vercel.app/)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-siliconepoch.vercel.app-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://siliconepoch.vercel.app/)
 [![React 19](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
 [![TanStack Start](https://img.shields.io/badge/TanStack-Start-FF4154?style=for-the-badge)](https://tanstack.com/start)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-v4-38BDF8?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blueviolet?style=for-the-badge)](LICENSE)
-[![Updated June 2026](https://img.shields.io/badge/Updated-June%202026-f04e23?style=for-the-badge)](https://siliconeposh.vercel.app/timeline)
+[![Updated June 2026](https://img.shields.io/badge/Updated-June%202026-f04e23?style=for-the-badge)](https://siliconepoch.vercel.app/timeline)
 
-**[🌐 Live Site](https://siliconeposh.vercel.app/)** · **[📚 All Chapters](https://siliconeposh.vercel.app/chapters)** · **[🧬 Frontier Labs](https://siliconeposh.vercel.app/companies)** · **[⚡ Infrastructure](https://siliconeposh.vercel.app/infrastructure)** · **[📜 Sources](https://siliconeposh.vercel.app/sources)**
+**[🌐 Live Site](https://siliconepoch.vercel.app/)** · **[📚 All Chapters](https://siliconepoch.vercel.app/chapters)** · **[🧬 Frontier Labs](https://siliconepoch.vercel.app/companies)** · **[⚡ Infrastructure](https://siliconepoch.vercel.app/infrastructure)** · **[📜 Sources](https://siliconepoch.vercel.app/sources)**
 
 </div>
 
@@ -52,21 +52,21 @@ This is that reference.
 
 | Chapter                             | What it covers                                                        | Live                                                |
 | ----------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------- |
-| 01 · The Compute Core               | Silicon fundamentals, packaging, HBM4, the substrate of AI            | [→](https://siliconeposh.vercel.app/compute)        |
-| 02 · How AI Works                   | Transformers, attention, MoE, diffusion, RLHF                         | [→](https://siliconeposh.vercel.app/how-ai-works)   |
-| 03 · Frontier Labs                  | OpenAI, Anthropic, DeepMind, Meta, DeepSeek, Mistral, xAI, Qwen, more | [→](https://siliconeposh.vercel.app/companies)      |
-| 04 · Infrastructure                 | Gigawatt campuses, dedicated nuclear, the grid build-out              | [→](https://siliconeposh.vercel.app/infrastructure) |
-| 05 · Geopolitics                    | TSMC, ASML, export controls, US vs China                              | [→](https://siliconeposh.vercel.app/geopolitics)    |
-| 06 · The Data Wall                  | Synthetic data, RLAIF, test-time scaling                              | [→](https://siliconeposh.vercel.app/data-wall)      |
-| 07 · Open vs Closed                 | Llama, DeepSeek, Qwen vs GPT, Claude, Gemini                          | [→](https://siliconeposh.vercel.app/open-vs-closed) |
-| 08 · Use Cases                      | Coding agents, science, contract review, the $2.5B ARR products       | [→](https://siliconeposh.vercel.app/use-cases)      |
-| 09 · Reinforcement Learning & Games | AlphaZero to Genie to Factorio                                        | [→](https://siliconeposh.vercel.app/games)          |
-| 10 · Humanity                       | Alignment, RLHF, labor, the human side                                | [→](https://siliconeposh.vercel.app/humanity)       |
-| 11 · AGI & ASI                      | Timelines, bottlenecks, frontier-lab roadmaps                         | [→](https://siliconeposh.vercel.app/agi-asi)        |
-| 12 · The Next Decade                | Quantum, neuromorphic, bio-AI                                         | [→](https://siliconeposh.vercel.app/next-decade)    |
-| 13 · Learn AI                       | A practical 2026 curriculum                                           | [→](https://siliconeposh.vercel.app/learn)          |
-| 14 · Sources                        | Every citation, every benchmark                                       | [→](https://siliconeposh.vercel.app/sources)        |
-| ★ · Interactive Timeline            | 1950 → 2026 in one scroll                                             | [→](https://siliconeposh.vercel.app/timeline)       |
+| 01 · The Compute Core               | Silicon fundamentals, packaging, HBM4, the substrate of AI            | [→](https://siliconepoch.vercel.app/compute)        |
+| 02 · How AI Works                   | Transformers, attention, MoE, diffusion, RLHF                         | [→](https://siliconepoch.vercel.app/how-ai-works)   |
+| 03 · Frontier Labs                  | OpenAI, Anthropic, DeepMind, Meta, DeepSeek, Mistral, xAI, Qwen, more | [→](https://siliconepoch.vercel.app/companies)      |
+| 04 · Infrastructure                 | Gigawatt campuses, dedicated nuclear, the grid build-out              | [→](https://siliconepoch.vercel.app/infrastructure) |
+| 05 · Geopolitics                    | TSMC, ASML, export controls, US vs China                              | [→](https://siliconepoch.vercel.app/geopolitics)    |
+| 06 · The Data Wall                  | Synthetic data, RLAIF, test-time scaling                              | [→](https://siliconepoch.vercel.app/data-wall)      |
+| 07 · Open vs Closed                 | Llama, DeepSeek, Qwen vs GPT, Claude, Gemini                          | [→](https://siliconepoch.vercel.app/open-vs-closed) |
+| 08 · Use Cases                      | Coding agents, science, contract review, the $2.5B ARR products       | [→](https://siliconepoch.vercel.app/use-cases)      |
+| 09 · Reinforcement Learning & Games | AlphaZero to Genie to Factorio                                        | [→](https://siliconepoch.vercel.app/games)          |
+| 10 · Humanity                       | Alignment, RLHF, labor, the human side                                | [→](https://siliconepoch.vercel.app/humanity)       |
+| 11 · AGI & ASI                      | Timelines, bottlenecks, frontier-lab roadmaps                         | [→](https://siliconepoch.vercel.app/agi-asi)        |
+| 12 · The Next Decade                | Quantum, neuromorphic, bio-AI                                         | [→](https://siliconepoch.vercel.app/next-decade)    |
+| 13 · Learn AI                       | A practical 2026 curriculum                                           | [→](https://siliconepoch.vercel.app/learn)          |
+| 14 · Sources                        | Every citation, every benchmark                                       | [→](https://siliconepoch.vercel.app/sources)        |
+| ★ · Interactive Timeline            | 1950 → 2026 in one scroll                                             | [→](https://siliconepoch.vercel.app/timeline)       |
 
 ---
 
@@ -84,7 +84,7 @@ This is that reference.
 | Qwen            | **Qwen 3.7-Max**              | (Alibaba)       | Hangzhou      | Open-weight scale                      |
 | Moonshot        | **Kimi K2.5 (open)**          | Yang Zhilin     | Beijing       | Long context, open weights             |
 
-Full comparison: **[/companies →](https://siliconeposh.vercel.app/companies)**
+Full comparison: **[/companies →](https://siliconepoch.vercel.app/companies)**
 
 ---
 
@@ -147,7 +147,7 @@ If you reference Silicon Epoch in academic or journalistic work:
   title  = {Silicon Epoch: A Field Guide to the AI Frontier},
   author = {iarhaaan},
   year   = {2026},
-  url    = {https://siliconeposh.vercel.app/}
+  url    = {https://siliconepoch.vercel.app/}
 }
 ```
 

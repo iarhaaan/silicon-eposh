@@ -17,11 +17,11 @@ export const Route = createFileRoute("/infrastructure")({
         property: "og:description",
         content: "Gigawatt training campuses, SMRs, and the new AI power grid.",
       },
-      { property: "og:url", content: "https://siliconeposh.vercel.app/infrastructure" },
-      { property: "og:image", content: "https://siliconeposh.vercel.app/og-image-dark.png" },
-      { name: "twitter:image", content: "https://siliconeposh.vercel.app/og-image-dark.png" },
+      { property: "og:url", content: "https://siliconepoch.vercel.app/infrastructure" },
+      { property: "og:image", content: "https://siliconepoch.vercel.app/og-image-dark.png" },
+      { name: "twitter:image", content: "https://siliconepoch.vercel.app/og-image-dark.png" },
     ],
-    links: [{ rel: "canonical", href: "https://siliconeposh.vercel.app/infrastructure" }],
+    links: [{ rel: "canonical", href: "https://siliconepoch.vercel.app/infrastructure" }],
 
     scripts: [
       {
@@ -32,23 +32,23 @@ export const Route = createFileRoute("/infrastructure")({
           headline: "AI Infrastructure & the Power Grid — Gigawatts at Scale",
           description:
             "Vera Rubin NVL72, dedicated nuclear SMRs, gigawatt training campuses — how the AI build-out is forcing the largest grid expansion since the 20th century.",
-          image: "https://siliconeposh.vercel.app/og-image-dark.png",
+          image: "https://siliconepoch.vercel.app/og-image-dark.png",
           datePublished: "2026-06-01",
           dateModified: "2026-06-14",
           author: {
             "@type": "Organization",
             name: "Silicon Epoch",
-            url: "https://siliconeposh.vercel.app",
+            url: "https://siliconepoch.vercel.app",
           },
           publisher: {
             "@type": "Organization",
             name: "Silicon Epoch",
             logo: {
               "@type": "ImageObject",
-              url: "https://siliconeposh.vercel.app/apple-touch-icon.png",
+              url: "https://siliconepoch.vercel.app/apple-touch-icon.png",
             },
           },
-          mainEntityOfPage: "https://siliconeposh.vercel.app/infrastructure",
+          mainEntityOfPage: "https://siliconepoch.vercel.app/infrastructure",
         }),
       },
       {
@@ -61,13 +61,13 @@ export const Route = createFileRoute("/infrastructure")({
               "@type": "ListItem",
               position: 1,
               name: "Home",
-              item: "https://siliconeposh.vercel.app/",
+              item: "https://siliconepoch.vercel.app/",
             },
             {
               "@type": "ListItem",
               position: 2,
               name: "AI Infrastructure & the Power Grid",
-              item: "https://siliconeposh.vercel.app/infrastructure",
+              item: "https://siliconepoch.vercel.app/infrastructure",
             },
           ],
         }),

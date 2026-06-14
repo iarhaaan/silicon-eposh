@@ -22,7 +22,7 @@ const routes = [
 ];
 
 const lastmod = new Date().toISOString().split("T")[0];
-const baseUrl = "https://siliconeposh.vercel.app";
+const baseUrl = "https://siliconepoch.vercel.app";
 
 let xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
 xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';

@@ -45,7 +45,7 @@ Same About panel. Paste:
 
 > **Description:** A comprehensive, living field guide to the AI revolution — every frontier lab, the chip wars, power grids, reasoning models, the data wall, AGI timelines, and the road to superintelligence. React 19 + TanStack Start + TypeScript. Updated June 2026.
 >
-> **Website:** https://siliconeposh.vercel.app
+> **Website:** https://siliconepoch.vercel.app
 
 ### 3. Upload social preview
 

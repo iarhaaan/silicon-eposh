@@ -17,11 +17,11 @@ export const Route = createFileRoute("/next-decade")({
         property: "og:description",
         content: "Quantum, neuromorphic, bio-AI — what comes after the transformer.",
       },
-      { property: "og:url", content: "https://siliconeposh.vercel.app/next-decade" },
-      { property: "og:image", content: "https://siliconeposh.vercel.app/og-image-dark.png" },
-      { name: "twitter:image", content: "https://siliconeposh.vercel.app/og-image-dark.png" },
+      { property: "og:url", content: "https://siliconepoch.vercel.app/next-decade" },
+      { property: "og:image", content: "https://siliconepoch.vercel.app/og-image-dark.png" },
+      { name: "twitter:image", content: "https://siliconepoch.vercel.app/og-image-dark.png" },
     ],
-    links: [{ rel: "canonical", href: "https://siliconeposh.vercel.app/next-decade" }],
+    links: [{ rel: "canonical", href: "https://siliconepoch.vercel.app/next-decade" }],
 
     scripts: [
       {
@@ -32,23 +32,23 @@ export const Route = createFileRoute("/next-decade")({
           headline: "The Next Decade — Quantum, Neuromorphic, Bio-AI",
           description:
             "What comes after the transformer: quantum advantage, neuromorphic chips, bio-AI for drug discovery, and the horizon technologies of the post-2030 AI landscape.",
-          image: "https://siliconeposh.vercel.app/og-image-dark.png",
+          image: "https://siliconepoch.vercel.app/og-image-dark.png",
           datePublished: "2026-06-01",
           dateModified: "2026-06-14",
           author: {
             "@type": "Organization",
             name: "Silicon Epoch",
-            url: "https://siliconeposh.vercel.app",
+            url: "https://siliconepoch.vercel.app",
           },
           publisher: {
             "@type": "Organization",
             name: "Silicon Epoch",
             logo: {
               "@type": "ImageObject",
-              url: "https://siliconeposh.vercel.app/apple-touch-icon.png",
+              url: "https://siliconepoch.vercel.app/apple-touch-icon.png",
             },
           },
-          mainEntityOfPage: "https://siliconeposh.vercel.app/next-decade",
+          mainEntityOfPage: "https://siliconepoch.vercel.app/next-decade",
         }),
       },
       {
@@ -61,13 +61,13 @@ export const Route = createFileRoute("/next-decade")({
               "@type": "ListItem",
               position: 1,
               name: "Home",
-              item: "https://siliconeposh.vercel.app/",
+              item: "https://siliconepoch.vercel.app/",
             },
             {
               "@type": "ListItem",
               position: 2,
               name: "The Next Decade",
-              item: "https://siliconeposh.vercel.app/next-decade",
+              item: "https://siliconepoch.vercel.app/next-decade",
             },
           ],
         }),

@@ -17,11 +17,11 @@ export const Route = createFileRoute("/compute")({
         property: "og:description",
         content: "Inside the chips, fabs, and packaging that make modern AI possible.",
       },
-      { property: "og:url", content: "https://siliconeposh.vercel.app/compute" },
-      { property: "og:image", content: "https://siliconeposh.vercel.app/og-image-dark.png" },
-      { name: "twitter:image", content: "https://siliconeposh.vercel.app/og-image-dark.png" },
+      { property: "og:url", content: "https://siliconepoch.vercel.app/compute" },
+      { property: "og:image", content: "https://siliconepoch.vercel.app/og-image-dark.png" },
+      { name: "twitter:image", content: "https://siliconepoch.vercel.app/og-image-dark.png" },
     ],
-    links: [{ rel: "canonical", href: "https://siliconeposh.vercel.app/compute" }],
+    links: [{ rel: "canonical", href: "https://siliconepoch.vercel.app/compute" }],
 
     scripts: [
       {
@@ -32,23 +32,23 @@ export const Route = createFileRoute("/compute")({
           headline: "The Compute Core — Silicon, Packaging, and AI Hardware",
           description:
             "How modern AI chips are built: NVIDIA Blackwell, Vera Rubin NVL72, Groq, TPU v6, TSMC 2nm N2, CoWoS packaging, HBM4 memory — the substrate of the AI era.",
-          image: "https://siliconeposh.vercel.app/og-image-dark.png",
+          image: "https://siliconepoch.vercel.app/og-image-dark.png",
           datePublished: "2026-06-01",
           dateModified: "2026-06-14",
           author: {
             "@type": "Organization",
             name: "Silicon Epoch",
-            url: "https://siliconeposh.vercel.app",
+            url: "https://siliconepoch.vercel.app",
           },
           publisher: {
             "@type": "Organization",
             name: "Silicon Epoch",
             logo: {
               "@type": "ImageObject",
-              url: "https://siliconeposh.vercel.app/apple-touch-icon.png",
+              url: "https://siliconepoch.vercel.app/apple-touch-icon.png",
             },
           },
-          mainEntityOfPage: "https://siliconeposh.vercel.app/compute",
+          mainEntityOfPage: "https://siliconepoch.vercel.app/compute",
         }),
       },
       {
@@ -61,13 +61,13 @@ export const Route = createFileRoute("/compute")({
               "@type": "ListItem",
               position: 1,
               name: "Home",
-              item: "https://siliconeposh.vercel.app/",
+              item: "https://siliconepoch.vercel.app/",
             },
             {
               "@type": "ListItem",
               position: 2,
               name: "The Compute Core",
-              item: "https://siliconeposh.vercel.app/compute",
+              item: "https://siliconepoch.vercel.app/compute",
             },
           ],
         }),

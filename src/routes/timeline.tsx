@@ -18,11 +18,11 @@ export const Route = createFileRoute("/timeline")({
         property: "og:description",
         content: "Every major milestone in AI from Turing to GPT-5.5.",
       },
-      { property: "og:url", content: "https://siliconeposh.vercel.app/timeline" },
-      { property: "og:image", content: "https://siliconeposh.vercel.app/og-image-dark.png" },
-      { name: "twitter:image", content: "https://siliconeposh.vercel.app/og-image-dark.png" },
+      { property: "og:url", content: "https://siliconepoch.vercel.app/timeline" },
+      { property: "og:image", content: "https://siliconepoch.vercel.app/og-image-dark.png" },
+      { name: "twitter:image", content: "https://siliconepoch.vercel.app/og-image-dark.png" },
     ],
-    links: [{ rel: "canonical", href: "https://siliconeposh.vercel.app/timeline" }],
+    links: [{ rel: "canonical", href: "https://siliconepoch.vercel.app/timeline" }],
 
     scripts: [
       {
@@ -33,23 +33,23 @@ export const Route = createFileRoute("/timeline")({
           headline: "Interactive AI History Timeline — 1950 to 2026",
           description:
             "From Turing's test to GPT-5.5 — an interactive timeline of every major AI milestone, model release, lab founding, and policy event of the last 75 years.",
-          image: "https://siliconeposh.vercel.app/og-image-dark.png",
+          image: "https://siliconepoch.vercel.app/og-image-dark.png",
           datePublished: "2026-06-01",
           dateModified: "2026-06-14",
           author: {
             "@type": "Organization",
             name: "Silicon Epoch",
-            url: "https://siliconeposh.vercel.app",
+            url: "https://siliconepoch.vercel.app",
           },
           publisher: {
             "@type": "Organization",
             name: "Silicon Epoch",
             logo: {
               "@type": "ImageObject",
-              url: "https://siliconeposh.vercel.app/apple-touch-icon.png",
+              url: "https://siliconepoch.vercel.app/apple-touch-icon.png",
             },
           },
-          mainEntityOfPage: "https://siliconeposh.vercel.app/timeline",
+          mainEntityOfPage: "https://siliconepoch.vercel.app/timeline",
         }),
       },
       {
@@ -62,13 +62,13 @@ export const Route = createFileRoute("/timeline")({
               "@type": "ListItem",
               position: 1,
               name: "Home",
-              item: "https://siliconeposh.vercel.app/",
+              item: "https://siliconepoch.vercel.app/",
             },
             {
               "@type": "ListItem",
               position: 2,
               name: "Interactive AI History Timeline",
-              item: "https://siliconeposh.vercel.app/timeline",
+              item: "https://siliconepoch.vercel.app/timeline",
             },
           ],
         }),

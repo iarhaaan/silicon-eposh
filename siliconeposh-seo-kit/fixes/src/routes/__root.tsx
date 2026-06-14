@@ -12,7 +12,7 @@ import appCss from "../styles.css?url";
 import { reportError } from "../lib/error-reporting";
 import { SmoothScroll } from "../components/smooth-scroll";
 
-const SITE_URL = "https://siliconeposh.vercel.app";
+const SITE_URL = "https://siliconepoch.vercel.app";
 
 function NotFoundComponent() {
   return (

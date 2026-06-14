@@ -16,11 +16,11 @@ export const Route = createFileRoute("/learn")({
         property: "og:description",
         content: "What to learn, in what order, to be AI-fluent in 2026.",
       },
-      { property: "og:url", content: "https://siliconeposh.vercel.app/learn" },
-      { property: "og:image", content: "https://siliconeposh.vercel.app/og-image-dark.png" },
-      { name: "twitter:image", content: "https://siliconeposh.vercel.app/og-image-dark.png" },
+      { property: "og:url", content: "https://siliconepoch.vercel.app/learn" },
+      { property: "og:image", content: "https://siliconepoch.vercel.app/og-image-dark.png" },
+      { name: "twitter:image", content: "https://siliconepoch.vercel.app/og-image-dark.png" },
     ],
-    links: [{ rel: "canonical", href: "https://siliconeposh.vercel.app/learn" }],
+    links: [{ rel: "canonical", href: "https://siliconepoch.vercel.app/learn" }],
 
     scripts: [
       {
@@ -31,23 +31,23 @@ export const Route = createFileRoute("/learn")({
           headline: "Learn AI in 2026 — A Practical Curriculum",
           description:
             "What to learn, in what order, to be AI-fluent in 2026: prompting, evals, agent loops, RAG, fine-tuning, and where AI fluency is now the largest pay differentiator.",
-          image: "https://siliconeposh.vercel.app/og-image-dark.png",
+          image: "https://siliconepoch.vercel.app/og-image-dark.png",
           datePublished: "2026-06-01",
           dateModified: "2026-06-14",
           author: {
             "@type": "Organization",
             name: "Silicon Epoch",
-            url: "https://siliconeposh.vercel.app",
+            url: "https://siliconepoch.vercel.app",
           },
           publisher: {
             "@type": "Organization",
             name: "Silicon Epoch",
             logo: {
               "@type": "ImageObject",
-              url: "https://siliconeposh.vercel.app/apple-touch-icon.png",
+              url: "https://siliconepoch.vercel.app/apple-touch-icon.png",
             },
           },
-          mainEntityOfPage: "https://siliconeposh.vercel.app/learn",
+          mainEntityOfPage: "https://siliconepoch.vercel.app/learn",
         }),
       },
       {
@@ -60,13 +60,13 @@ export const Route = createFileRoute("/learn")({
               "@type": "ListItem",
               position: 1,
               name: "Home",
-              item: "https://siliconeposh.vercel.app/",
+              item: "https://siliconepoch.vercel.app/",
             },
             {
               "@type": "ListItem",
               position: 2,
               name: "Learn AI in 2026",
-              item: "https://siliconeposh.vercel.app/learn",
+              item: "https://siliconepoch.vercel.app/learn",
             },
           ],
         }),

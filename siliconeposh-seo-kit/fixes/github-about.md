@@ -6,7 +6,7 @@ A comprehensive, living field guide to the AI revolution — every frontier lab,
 
 ## Website
 
-https://siliconeposh.vercel.app
+https://siliconepoch.vercel.app
 
 ## Topics (paste all 20)
 

@@ -15,11 +15,11 @@ export const Route = createFileRoute("/chapters")({
         property: "og:description",
         content: "Browse every chapter of Silicon Epoch — the AI field guide.",
       },
-      { property: "og:url", content: "https://siliconeposh.vercel.app/chapters" },
-      { property: "og:image", content: "https://siliconeposh.vercel.app/og-image-dark.png" },
-      { name: "twitter:image", content: "https://siliconeposh.vercel.app/og-image-dark.png" },
+      { property: "og:url", content: "https://siliconepoch.vercel.app/chapters" },
+      { property: "og:image", content: "https://siliconepoch.vercel.app/og-image-dark.png" },
+      { name: "twitter:image", content: "https://siliconepoch.vercel.app/og-image-dark.png" },
     ],
-    links: [{ rel: "canonical", href: "https://siliconeposh.vercel.app/chapters" }],
+    links: [{ rel: "canonical", href: "https://siliconepoch.vercel.app/chapters" }],
 
     scripts: [
       {
@@ -30,23 +30,23 @@ export const Route = createFileRoute("/chapters")({
           headline: "All Chapters — Silicon Epoch Index",
           description:
             "Browse every chapter of Silicon Epoch: compute, frontier labs, infrastructure, geopolitics, alignment, AGI, the data wall, and what comes next.",
-          image: "https://siliconeposh.vercel.app/og-image-dark.png",
+          image: "https://siliconepoch.vercel.app/og-image-dark.png",
           datePublished: "2026-06-01",
           dateModified: "2026-06-14",
           author: {
             "@type": "Organization",
             name: "Silicon Epoch",
-            url: "https://siliconeposh.vercel.app",
+            url: "https://siliconepoch.vercel.app",
           },
           publisher: {
             "@type": "Organization",
             name: "Silicon Epoch",
             logo: {
               "@type": "ImageObject",
-              url: "https://siliconeposh.vercel.app/apple-touch-icon.png",
+              url: "https://siliconepoch.vercel.app/apple-touch-icon.png",
             },
           },
-          mainEntityOfPage: "https://siliconeposh.vercel.app/chapters",
+          mainEntityOfPage: "https://siliconepoch.vercel.app/chapters",
         }),
       },
       {
@@ -59,13 +59,13 @@ export const Route = createFileRoute("/chapters")({
               "@type": "ListItem",
               position: 1,
               name: "Home",
-              item: "https://siliconeposh.vercel.app/",
+              item: "https://siliconepoch.vercel.app/",
             },
             {
               "@type": "ListItem",
               position: 2,
               name: "All Chapters",
-              item: "https://siliconeposh.vercel.app/chapters",
+              item: "https://siliconepoch.vercel.app/chapters",
             },
           ],
         }),

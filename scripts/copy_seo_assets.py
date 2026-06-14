@@ -21,7 +21,11 @@ def copy_seo_assets():
     shutil.copy2(os.path.join(assets_dir, "og-image-1200x630-light.png"), os.path.join(public_dir, "og-image-light.png"))
     shutil.copy2(os.path.join(assets_dir, "og-image-1200x630-dark.png"), os.path.join(public_dir, "og-image-dark.png"))
     shutil.copy2(os.path.join(assets_dir, "og-image-1200x630-dark.png"), os.path.join(public_dir, "og-image.png")) # copy dark as default og-image.png
-    print("Copied public favicon, apple-touch-icon, and og-images.")
+    shutil.copy2(os.path.join(assets_dir, "twitter-card-1200x675-light.png"), os.path.join(public_dir, "twitter-card-light.png"))
+    shutil.copy2(os.path.join(assets_dir, "twitter-card-1200x675-dark.png"), os.path.join(public_dir, "twitter-card-dark.png"))
+    shutil.copy2(os.path.join(assets_dir, "github-social-preview-1280x640-light.png"), os.path.join(public_dir, "github-social-preview-light.png"))
+    shutil.copy2(os.path.join(assets_dir, "github-social-preview-1280x640-dark.png"), os.path.join(public_dir, "github-social-preview-dark.png"))
+    print("Copied public favicon, apple-touch-icon, og-images, twitter cards, and github social previews.")
 
     # 2. Copy brand SVG logos
     shutil.copy2(os.path.join(assets_dir, "logo-icon-light.svg"), os.path.join(brand_components_dir, "logo-icon-light.svg"))

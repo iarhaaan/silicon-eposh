@@ -38,6 +38,9 @@ def copy_seo_files():
     
     shutil.copy2(os.path.join(fixes_dir, ".github", "ISSUE_TEMPLATE", "feature_request.md"), os.path.join(issue_template_dir, "feature_request.md"))
     print("Copied feature_request.md")
+    
+    shutil.copy2(os.path.join(fixes_dir, ".github", "ISSUE_TEMPLATE", "config.yml"), os.path.join(issue_template_dir, "config.yml"))
+    print("Copied config.yml")
 
     # 4. Copy README.md with Bun -> npm string replacement
     readme_src_path = os.path.join(fixes_dir, "README.md")
